@@ -23,12 +23,18 @@ table{
 	justify-content: center;
 	width: 80%;
 }
-#logo {
-	height: 100px;
-	width:100px;
-
+header #logo {
+	display: inline-block;
+	margin-left: 25%;
 }
-
+.login{
+	display: inline-block;
+	margin-left: 30%;
+}
+header #logo img{
+	width:100px;
+	height:100px;
+}
 
 session{
 	display: flex;
@@ -109,5 +115,10 @@ button{
     border: 0;
 }
 
-	
+.slide{
+	width:1200px;
+	height:511px;
+	display: inline-block;
+	justify-content: center;
+}
 

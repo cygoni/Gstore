@@ -20,7 +20,7 @@
 
 <header>
 	<div class="search">
-		<div class = "search_div">
+		<div class="search_div">
 			<input class="keyword" type='text' name='search' maxlength=255
 				value="" autocomplete="off" placeholder="검색어를 입력해주세요.">
 			<button class="search_button" type="submit" name="click" value="검색">
@@ -28,11 +28,12 @@
 			</button>
 		</div>
 	</div>
-	<img id="logo" src="img/logo.jpg">
-
+	<div id="logo">
+		<a href="main.do"><img  src="img/logo.jpg"></a>
+	</div>
 	<button class="login"
 		onclick="location.href = 'main.do?center=member/login'">로그인</button>
-	<button class="join" 
+	<button class="join"
 		onclick="location.href = 'main.do?center=member/join'">회원가입</button>
 
 
