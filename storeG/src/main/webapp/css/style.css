@@ -122,3 +122,12 @@ button{
 	justify-content: center;
 }
 
+
+.modal-footer{
+	display: flex;
+}
+
+.login_api{
+	width: 35px;
+	height: 35px;
+}

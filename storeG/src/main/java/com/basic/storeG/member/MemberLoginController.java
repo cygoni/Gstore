@@ -13,11 +13,13 @@ import com.basic.storeG.frontController.Controller;
 import com.basic.storeG.vo.Member;
 
 
-public class MmeberLoginController implements Controller {
+public class MemberLoginController implements Controller {
 	
 	@Override
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
+		response.setContentType("text/html; charset=UTF-8");
 		
 		String id = request.getParameter("id");
 		String pw = request.getParameter("pw");
