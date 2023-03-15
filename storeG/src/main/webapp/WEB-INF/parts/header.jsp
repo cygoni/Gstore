@@ -9,21 +9,32 @@
 <title>storeG</title>
 <link rel="stylesheet" type="text/css" href="${ctx}/css/style.css">
 </head>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
-<body>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+<script
+	src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
 
-	<header>
 
-		<a> G STORE</a>
-		<div>
-			<button onclick = "location.href = 'main.do?center=member/login'" >로그인</button>
-			<button>회원가입</button>
+<header>
+	<div class="search">
+		<div class = "search_div">
+			<input class="keyword" type='text' name='search' maxlength=255
+				value="" autocomplete="off" placeholder="검색어를 입력해주세요.">
+			<button class="search_button" type="submit" name="click" value="검색">
+				<span class="search_span"><span class="blind">검색</span></span>
+			</button>
 		</div>
-		<table>
+	</div>
+	<img id="logo" src="img/logo.jpg">
 
-			<tr>
-				<td><img src="img/header.png"></td>
-			</tr>
-		</table>
-	</header>
+	<button class="login"
+		onclick="location.href = 'main.do?center=member/login'">로그인</button>
+	<button class="join" 
+		onclick="location.href = 'main.do?center=member/join'">회원가입</button>
+
+
+</header>
+<session>
