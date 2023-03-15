@@ -1,13 +1,6 @@
 package com.basic.storeG.util;
 
-import java.io.IOException;
 import java.io.InputStream;
-
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -20,7 +13,8 @@ public class MybatisConfig {
 	
 	static {
 		try {
-			String resource = "com/basic/mybatis/config.xml";
+			System.out.println("MybatisConfig입장");
+			String resource = "com/basic/storeG/mybatis/config.xml";
 			InputStream inputStream = Resources.getResourceAsStream(resource);
 			sqlSessionFactory  = new SqlSessionFactoryBuilder().build(inputStream);
 		} catch (Exception e) {

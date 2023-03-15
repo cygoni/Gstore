@@ -27,17 +27,18 @@
 
 		<a> G STORE</a>
 		<div>
-
-			<button type="button" class="btn btn-primary" data-toggle="modal"
+			<c:if test="${ empty id }">
+				<button type="button" class="btn btn-primary" data-toggle="modal"
 				data-target="#exampleModal">로그인</button>
 			<button>회원가입</button>
+			</c:if>
+			<c:if test="${ not empty id }">
+				${ id }님
+				<button onclick="location.href='memberLogout.do'">로그아웃</button>
+			</c:if>
+			
 		</div>
-		<table>
 
-			<tr>
-				<td><img src="img/header.png"></td>
-			</tr>
-		</table>
 	</header>
 
 
@@ -54,13 +55,13 @@
 				</div>
 				<div class="modal-body">
 					<div class="member_login">
-						<form th:action="@{/auth/loginProc}" th:method="POST">
+						<form action="memberLogin.do" method="POST">
 							<div class="member_login_input">
-								<input type="text" name="username" placeholder="아이디">
+								<input type="text" name="id" placeholder="아이디">
 							</div>
 
 							<div class="member_login_input">
-								<input type="password" name="password" placeholder="비밀번호">
+								<input type="password" name="pw" placeholder="비밀번호">
 							</div>
 
 							<div class="member_login_btn">
@@ -68,7 +69,7 @@
 								<input type="submit" class="btn btn-secondary" id="btn-login"
 									value="로그인"> <input type="button"
 									class="btn btn-secondary" value="회원가입"
-									onclick="location.href='/member/join'">
+									onclick="location.href='/memberJoin.do'">
 
 							</div>
 

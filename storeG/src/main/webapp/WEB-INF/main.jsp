@@ -4,7 +4,13 @@
 
 <table>
 
-	<h1>Main</h1>
+	<h1>
+		<a href="itemList.do">Main</a>
+	</h1>
+
+	<tr>
+		<td><img src="img/header.png"></td>
+	</tr>
 
 	<tr>
 		<td><img src="img/main.png"></td>

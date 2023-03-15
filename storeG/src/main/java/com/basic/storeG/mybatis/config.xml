@@ -6,10 +6,10 @@
 	<properties resource="com/basic/storeG/mybatis/db.properties" />
 	<typeAliases>
 		<!--          						  vo       변수명   -->
-		<typeAlias type="com.basic.storeG.vo.Item" alias="item"/>
+		<!-- <typeAlias type="com.basic.storeG.vo.Item" alias="item"/> -->
 		<typeAlias type="com.basic.storeG.vo.Member" alias="member"/>
-		<typeAlias type="com.basic.storeG.vo.Order" alias="order"/>
-		<typeAlias type="com.basic.storeG.vo.Review" alias="review"/>
+		<!-- <typeAlias type="com.basic.storeG.vo.Order" alias="order"/>
+		<typeAlias type="com.basic.storeG.vo.Review" alias="review"/> -->
 	</typeAliases>
 	
 	<environments default="development">
@@ -26,8 +26,8 @@
 	
 	<mappers>
 	    <mapper resource="com/basic/storeG/mybatis/MemberMapper.xml"/>
-	    <mapper resource="com/basic/storeG/mybatis/ItemMapper.xml"/>
+	    <!-- <mapper resource="com/basic/storeG/mybatis/ItemMapper.xml"/>
 	    <mapper resource="com/basic/storeG/mybatis/OrderMapper.xml"/>
-	    <mapper resource="com/basic/storeG/mybatis/ReviewMapper.xml"/>
+	    <mapper resource="com/basic/storeG/mybatis/ReviewMapper.xml"/> -->
 	  </mappers>
 </configuration>
