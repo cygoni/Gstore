@@ -1,0 +1,16 @@
+@charset "UTF-8";
+*{
+	text-decoration: none;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+html,
+body{
+	height: 100%;
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+}

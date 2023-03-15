@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.review">
+	<resultMap type="com.basic.storeG.vo.Review" id="review">
+		<id column="review_no" property="reviewNo" />
+		<result column="writer" property="writer" />
+		<result column="content" property="content" />
+		<result column="write_date" property="writeDate" />
+		<result column="rating" property="rating" />
+	</resultMap>
+	
+	
+	
+</mapper>
