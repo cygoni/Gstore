@@ -17,13 +17,8 @@ public class MainController implements Controller {
 	@Override
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		request.setCharacterEncoding("utf-8");
-		String center ="main";
-		if(request.getParameter("center")!= null) {
-			    center = request.getParameter("center");   
-		}
-
-		return center;
+		
+		return "main";
 	}
 
 }

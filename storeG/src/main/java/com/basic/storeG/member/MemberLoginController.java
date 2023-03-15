@@ -13,7 +13,7 @@ import com.basic.storeG.frontController.Controller;
 import com.basic.storeG.vo.Member;
 
 
-public class MmeberLoginController implements Controller {
+public class MemberLoginController implements Controller {
 	
 	@Override
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
