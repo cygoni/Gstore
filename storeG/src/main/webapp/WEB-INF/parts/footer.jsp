@@ -2,13 +2,14 @@
 	pageEncoding="UTF-8"%>
 
 <footer>
-	<table id="footer">
 
-		<tr>
-			<td><img   src="img/footer.png"></td>
-		</tr>
+	
 
-	</table>
+		
+			<img   src="img/footer.png">
+		
+
+
 
 </footer>
 
