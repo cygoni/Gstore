@@ -12,8 +12,9 @@
 			<img class="slide" src="img/main07.jpg">
 			<img class="slide" src="img/main08.jpg">
 		</div>
+		<h1><a href="itemList.do">리스트go</a></h1>
 		<div>
-			<img src="img/main.png">
+			<a href="product.do"><img src="img/main.png"></a>
 		</div>
 
 

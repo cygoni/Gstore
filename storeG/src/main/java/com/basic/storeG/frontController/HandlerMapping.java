@@ -4,6 +4,7 @@ import java.util.HashMap;
 
 import com.basic.storeG.controller.MainController;
 import com.basic.storeG.item.ItemListController;
+import com.basic.storeG.item.ProductController;
 import com.basic.storeG.member.MemberLoginController;
 import com.basic.storeG.member.MemberLogoutController;
 
@@ -17,6 +18,7 @@ public class HandlerMapping {
 		mappings.put("/memberLogin.do", new MemberLoginController());
 		mappings.put("/memberLogout.do", new MemberLogoutController());
 		mappings.put("/itemList.do", new ItemListController());
+		mappings.put("/product.do", new ProductController());
 	}
 	
 	public Controller getController(String key) {
