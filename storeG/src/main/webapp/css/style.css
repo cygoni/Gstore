@@ -3,7 +3,7 @@
 * {
 	text-decoration: none;
 	box-sizing: border-box;
-	text-align: center;
+	
 	
 }
 
@@ -15,6 +15,7 @@ html, body {
 body {
 	display: flex;
 	flex-direction: column;
+	
 }
 
 table {
@@ -25,12 +26,112 @@ table {
 
 header #logo {
 	display: inline-block;
-	margin-left: 25%;
+	margin:0 10% 0 28%;
+	
 }
 
 .login {
 	display: inline-block;
-	margin-left: 30%;
+	margin-left: 10%;
+	background-color: #02b875;
+	width: 100px;
+	height:40px;
+	border-radius: 5px;
+	color: #fff;
+}
+.login:hover{
+	background-color: #0069d9;
+}
+
+.logout{
+	display: inline-block;
+	background-color: #02b875;
+	width: 100px;
+	height:40px;
+	border-radius: 5px;
+	color: #fff;
+	align-items: center;
+}
+.logout:hover{
+	background-color: #0069d9;
+}
+.user{
+	display: inline-block;
+}
+.basket{
+	display: inline-block;
+}
+.myinfo{
+	display: inline-block;
+	
+}
+.basket_button{
+	display: flex;
+	flex-direction:column;
+	background-color: #02b875;
+	width: 80px;
+	height:60px;
+	border-radius: 5px;
+	color: #fff;
+	align-items:center; 
+	
+}
+.basket_button svg{
+	margin-top: 5px;
+	width: 25px;
+	height:25px;
+}
+.basket_button div{
+	display: inline-block;
+	opacity:0;
+}
+
+.basket_button div:hover{
+	opacity:1;
+}
+.myinfo_button:hover{
+	background-color: #0069d9;	
+}
+.basket_button:hover{
+	background-color: #0069d9;
+}
+.myinfo_button{
+	
+	display: flex;
+	flex-direction:column;
+	background-color: #02b875;
+	width: 80px;
+	height:60px;
+	border-radius: 5px;
+	color: #fff;
+	align-items:center;
+	
+}
+.myinfo_button svg{
+	margin-top: 5px;
+	width: 25px;
+	height:25px;
+}
+.myinfo_button div{
+	display: inline-block;
+	opacity:0;
+}
+
+.myinfo_button div:hover{
+	opacity:1;
+}
+
+.join {
+	display: inline-block;
+	margin-left: 10px;
+	background-color: #02b875;
+	width: 100px;
+	height:40px;
+	border-radius: 5px;
+	color: #fff;
+}
+.join:hover{
+	background-color:#0069d9;
 }
 
 header #logo img {
@@ -46,11 +147,10 @@ session {
 }
 
 header {
+	width:1200px;
 	display: flex;
-	flex-direction: row;
-	align-items: center;
 	
-	padding-left: 12%;
+
 }
 
 footer {
@@ -74,13 +174,12 @@ button {
 	cursor: pointer;
 }
 
-.search_main{
-	
-	display:flex;
-	
+header .search_main{
+	padding:0;
+	margin-left:0;
+	display:inline-block;
 	width: 218px;
-	align-items: center;
-	
+
 }
 
 .search_div {
@@ -149,7 +248,7 @@ button {
 
 .new_item{
 	margin:50px;
-	width: 80%;
+	width: 1200px;
 	display: flex;
 	flex-direction: column;
 	
@@ -158,10 +257,11 @@ h1{
 	display: flex;
 	justify-content: flex-start;
 	margin-left: 5%;
+	
 }
 .best_item{
 	margin:50px;
-	width: 80%;
+	width: 1200px;
 	display: flex;
 	flex-direction: column;
 	
@@ -432,4 +532,69 @@ dd input{
 
 .pdt_btn3 button:hover{
 	background-color: #4582ec;
+}
+
+.myinfo_container .session{
+	width:1200px;
+	display: flex;
+	justify-content: center;
+	
+}
+.myinfo_content{
+	width:800px;
+	box-sizing:border-box;
+	border: 1px solid gray;
+	margin:10px;
+	border-radius: 8px;
+}
+
+.content_top{
+	display: flex;
+	flex-direction: row;
+}
+.content_top h3{
+	display:inline-block;
+	flex-direction:row;
+	margin: 10px 0 10px 20px;
+	width:80%;
+}
+.content_top button{
+	
+	display:inline-block;
+	width:20%;
+	
+}
+
+.mid_name,.mid_address, .mid_phone_no, .mid_email, .mid_mileage, .mid_coupon, .mid_money{
+	width:100%;
+	display: flex;
+	flex-direction: row;
+	border: 1px solid gray;
+	justify-content: space-around;
+	padding:10px;
+}
+
+.info_name,.info_phone_no,.info_address,.info_email,.info_mileage,.info_coupon,.info_money{
+	display:inline-block;
+	width:40%;
+	margin:0;
+	padding:0;
+}
+.user_name,.user_address,.user_phone_no,.user_email,.user_mileage,.user_coupon,.user_money{
+	width: 40%;
+	margin:0;
+}
+.cate_list{
+	
+	display: inline-block;
+	justify-content: space-around;
+	width: 1200px;
+}
+.cate_img{
+	width:1200px;
+}
+.cate_name{
+	margin:20px 0 0 50px;
+	display:flex;
+	justify-content: flex-start;
 }

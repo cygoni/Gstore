@@ -29,6 +29,7 @@ public class MemberLoginController implements Controller {
 		vo.setId(id);
 		vo.setPw(pw);
 		
+		
 		String memberid = dao.memberLogin(vo);
 		
 		HttpSession session = request.getSession();
@@ -41,7 +42,7 @@ public class MemberLoginController implements Controller {
 		} else {
 			response.getWriter().print("null");
 		}
-						
+					
 		return "main";
 	}
 }

@@ -8,6 +8,7 @@
 			<meta charset="UTF-8">
 			<title>storeG</title>
 			<link rel="stylesheet" type="text/css" href="${ctx}/css/style.css">
+			<script src="https://kit.fontawesome.com/116a85af51.js" crossorigin="anonymous"></script>
 		</head>
 
 		<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
@@ -15,7 +16,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
+<session>
 		<body>
 			<header>
 				<div class="search_main">
@@ -36,8 +37,16 @@
 					<button class="join" onclick="location.href = 'main.do?center=member/join'">회원가입</button>
 				</c:if>
 				<c:if test="${ not empty id }">
-					${ id }님
-					<button onclick="location.href='memberLogout.do'">로그아웃</button>
+				<div class="myinfo"><button class="myinfo_button" onclick="location.href='myinfo.do'">
+				<i class="fa-solid fa-person"></i>
+				<div>내정보</div>
+				</button></div>
+					
+				<div class="basket" ><button class="basket_button" ><i class="fa-solid fa-tag"></i><div>장바구니</div></button></div>
+					<div class="user">
+					<div class="user_id">${ id }님</div>
+					</div>
+					<button class="logout" onclick="location.href='memberLogout.do'">로그아웃</button>
 				</c:if>
 				<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
 					aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -94,4 +103,4 @@
 					</div>
 				</div>
 			</header>
-			<session>
+			
