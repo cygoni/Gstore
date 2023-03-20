@@ -34,7 +34,7 @@
 				</div>
 				<c:if test="${ empty id }">
 					<button class="login" data-toggle="modal" data-target="#exampleModal">로그인</button>
-					<button class="join" onclick="location.href = 'main.do?center=member/join'">회원가입</button>
+					<button class="join" onclick="location.href = 'joinPage.do'">회원가입</button>
 				</c:if>
 				<c:if test="${ not empty id }">
 				<div class="myinfo"><button class="myinfo_button" onclick="location.href='myinfo.do'">

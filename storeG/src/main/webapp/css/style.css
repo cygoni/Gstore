@@ -3,8 +3,8 @@
 * {
 	text-decoration: none;
 	box-sizing: border-box;
-	
-	
+	text-align: center;
+
 }
 
 html, body {
@@ -149,8 +149,9 @@ session {
 header {
 	width:1200px;
 	display: flex;
-	
-
+	flex-direction: row;
+	align-items: center;
+	padding-left: 12%;
 }
 
 footer {
@@ -174,12 +175,18 @@ button {
 	cursor: pointer;
 }
 
+
 header .search_main{
 	padding:0;
 	margin-left:0;
 	display:inline-block;
 	width: 218px;
+}
 
+.search_main {
+	display: flex;
+	width: 218px;
+	align-items: center;
 }
 
 .search_div {
@@ -246,273 +253,291 @@ header .search_main{
 	height: 35px;
 }
 
-.new_item{
-	margin:50px;
-	width: 1200px;
+
+.new_item {
+	margin: 50px;
+	width: 80%;
 	display: flex;
 	flex-direction: column;
-	
 }
-h1{
+
+h1 {
 	display: flex;
 	justify-content: flex-start;
 	margin-left: 5%;
 	
 }
-.best_item{
-	margin:50px;
-	width: 1200px;
+
+.best_item {
+	margin: 50px;
+	width: 80%;
 	display: flex;
 	flex-direction: column;
-	
 }
-.item_content{
+
+.item_content {
 	background-image: cover;
-	
 	margin: 0 5%;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
 	border: 1px solid;
-	
 }
-.itemlist img{
+
+.itemlist img {
 	width: 150px;
 	height: 150px;
 }
 
-.text_box{
+.text_box {
 	background-color: gray;
-	color:white;
+	color: white;
 }
-.payment{
-	width:1200px;
+
+.payment {
+	width: 1200px;
 }
-.payment_content{
+
+.payment_content {
 	display: flex;
 	justify-content: flex-start;
 	font-size: large;
-	margin:20px 0 0 20px;
+	margin: 20px 0 0 20px;
 }
+
 .wrapper {
 	width: 1200px;
-    padding: 40px 0 120px;
-    background: #f5f5f5;
-    border-radius: 8px;
-    margin-bottom: 10px;
+	padding: 40px 0 120px;
+	background: #f5f5f5;
+	border-radius: 8px;
+	margin-bottom: 10px;
 }
-.info{
-	margin-left:10px;
-	width:400px;
+
+.info {
+	margin-left: 10px;
+	width: 400px;
 	display: flex;
 	justify-content: flex-start;
 }
 
-.wrapper .session_left{
-	margin-left:50px;
+.wrapper .session_left {
+	margin-left: 50px;
 	float: left;
-	width:500px;
-	
+	width: 500px;
 }
-.wrapper .session_right{
-	margin-right:50px;
+
+.wrapper .session_right {
+	margin-right: 50px;
 	float: right;
-	width:500px;
+	width: 500px;
 }
-.innerBox{
-	
-    padding: 30px;
-    box-sizing: border-box;
+
+.innerBox {
+	padding: 30px;
+	box-sizing: border-box;
 }
-.innerBox p{
+
+.innerBox p {
 	display: flex;
-    justify-content: flex-start;
+	justify-content: flex-start;
 }
-.info{
-	margin:35px 0 0 35px;
-	
+
+.info {
+	margin: 35px 0 0 35px;
 }
-.name{
+
+.name {
 	margin-bottom: 10px;
 }
-.discount_info{
-	margin-top:20px;
+
+.discount_info {
+	margin-top: 20px;
 }
-.session_right{
+
+.session_right {
 	border: 1px solid #333;
-    border-radius: 8px;
-  	background: #fff;
+	border-radius: 8px;
+	background: #fff;
 }
-.session_left{
+
+.session_left {
 	border: 1px solid #333;
-    border-radius: 8px;
-  	background: #fff;
+	border-radius: 8px;
+	background: #fff;
 }
+
 .payment-button {
-  display: inline-block;
-  padding: 10px 20px;
-  width:100%;
-  background-color: #02b875;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
+	display: inline-block;
+	padding: 10px 20px;
+	width: 100%;
+	background-color: #02b875;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor: pointer;
 }
 
 .payment-button:hover {
-  background-color: #0069d9;
+	background-color: #0069d9;
 }
 
-.product_content,.discount_content,.shipping_content{
+.product_content, .discount_content, .shipping_content {
 	border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-  display: inline-block;
-	width:100%;
-}
-.price_box {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 20px;
-  display: inline-block;
-	width:100%;
-	margin: 10px 0;
-  
-}
-.product_price, .discount_price, .total_price{
-   margin-bottom: 10px;
-  display: flex;
- 
-  justify-content: space-between;
+	border-radius: 5px;
+	padding: 20px;
+	display: inline-block;
+	width: 100%;
 }
 
+.price_box {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 20px;
+	display: inline-block;
+	width: 100%;
+	margin: 10px 0;
+}
+
+.product_price, .discount_price, .total_price {
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
+}
 
 .product-label {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .product-value {
-  color: #007bff;
+	color: #007bff;
 }
-.mileage_button{
+
+.mileage_button {
 	display: inline-block;
-  padding: 10px 20px;
- 
-  background-color: #02b875;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
+	padding: 10px 20px;
+	background-color: #02b875;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor: pointer;
 }
+
 .mileage_button:hover {
-  background-color: #0069d9;
+	background-color: #0069d9;
 }
-.coupon_button{
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #02b875;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
+
+.coupon_button {
+	display: inline-block;
+	padding: 10px 20px;
+	background-color: #02b875;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor: pointer;
 }
+
 .coupon_button:hover {
-  background-color: #0069d9;
+	background-color: #0069d9;
 }
-.mileage, .coupon{
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-between;
+
+.mileage, .coupon {
+	margin-bottom: 10px;
+	display: flex;
+	justify-content: space-between;
 }
-.address{
+
+.address {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-.address_button{
+
+.address_button {
 	display: inline-block;
-  padding: 10px 20px;
-  background-color: #02b875;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 5px;
-  cursor: pointer;
+	padding: 10px 20px;
+	background-color: #02b875;
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor: pointer;
 }
+
 .address_button:hover {
-  background-color: #0069d9;
+	background-color: #0069d9;
 }
-.innerBox .name, .innerBox .phone{
+
+.innerBox .name, .innerBox .phone {
 	display: flex;
 	justify-content: flex-start;
 }
 
-.product_container{
+.product_container {
 	width: 80%;
 }
 
-.product_top{
-	
+.product_top {
 	display: flex;
 	flex-direction: row;
 }
+
 .product_top_left {
-  float: left;
-  left: 30px; 
-  width: 50%;
+	float: left;
+	left: 30px;
+	width: 50%;
 }
 
 .product_top_left img {
-  width: 85%;
+	width: 85%;
 }
 
 .product_ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  margin-top: 10px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+	margin-top: 10px;
 }
 
 .product_ul li {
-  text-align: center;
-  margin: 0 10px;
+	text-align: center;
+	margin: 0 10px;
 }
 
 .product_ul li img {
-  width: 50px;
-  height: 50px;
-  border: 1px solid black;
+	width: 50px;
+	height: 50px;
+	border: 1px solid black;
 }
 
 .product_ul li img:hover {
 	border: 2px solid black;
 }
 
-.product_top_right{
+.product_top_right {
 	justify-content: center;
 	align-items: center;
 }
 
-.cp_down{
+.cp_down {
 	background-color: lightgreen;
 }
 
-dl, dd{
+dl, dd {
 	display: flex;
 }
 
-dt{
+dt {
 	width: 33%;
 	padding-left: 10px;
 	text-align: left;
 }
 
-dd input{
+dd input {
 	width: 50px;
 }
 
@@ -521,18 +546,20 @@ dd input{
 	background-color: #02b875;
 	/* background: url(../img/btn_num_up.png) 0 0 no-repeat; */
 }
+
 .down {
-  cursor: pointer;
-  /* background: url(../img/btn_num_down.png) 0 0 no-repeat; */
+	cursor: pointer;
+	/* background: url(../img/btn_num_down.png) 0 0 no-repeat; */
 }
 
-.pdt_head{
+.pdt_head {
 	text-align: center
 }
 
-.pdt_btn3 button:hover{
+.pdt_btn3 button:hover {
 	background-color: #4582ec;
 }
+
 
 .myinfo_container .session{
 	width:1200px;
@@ -597,4 +624,33 @@ dd input{
 	margin:20px 0 0 50px;
 	display:flex;
 	justify-content: flex-start;
+}
+
+.footer_container {
+	display: flex; background-color : lightgray;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	background-color: lightgray;
+}
+
+.item_heart img,
+.item_cart img{
+	width:25px;
+}
+
+.join_container{
+	width: 60%;
+}
+
+.join_container table{
+	width: 100%;
+}
+
+
+.join_outh{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
 }
