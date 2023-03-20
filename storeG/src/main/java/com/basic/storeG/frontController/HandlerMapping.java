@@ -12,6 +12,7 @@ import com.basic.storeG.member.JoinPageController;
 import com.basic.storeG.member.MemberJoinController;
 import com.basic.storeG.member.MemberLoginController;
 import com.basic.storeG.member.MemberLogoutController;
+import com.basic.storeG.member.MyOrderController;
 
 public class HandlerMapping {
 	private HashMap<String, Controller> mappings;
@@ -28,6 +29,7 @@ public class HandlerMapping {
 		mappings.put("/product.do", new ProductController());
 		mappings.put("/myinfo.do", new myinfoController());
 		mappings.put("/myinfomodify.do", new myinfomodifyController());
+		mappings.put("/myOrder.do", new MyOrderController());
 		
 	}
 

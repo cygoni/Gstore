@@ -44,7 +44,11 @@
 					
 				<div class="basket" ><button class="basket_button" ><i class="fa-solid fa-tag"></i><div>장바구니</div></button></div>
 					<div class="user">
-					<div class="user_id">${ id }님</div>
+					<div class="user_id">
+					<a href="myOrder.do">
+						${ id }님
+					</a>
+					</div>
 					</div>
 					<button class="logout" onclick="location.href='memberLogout.do'">로그아웃</button>
 				</c:if>
