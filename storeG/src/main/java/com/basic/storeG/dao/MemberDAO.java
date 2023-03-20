@@ -27,7 +27,7 @@ public class MemberDAO {
 		   SqlSession session= MybatisConfig.getInstance().openSession(true);
 		   Member member = session.selectOne("mapper.member.getOneMember",id);
 		   session.close();
-		   
+		    
 		   return member;
 	   }
 	
