@@ -46,7 +46,11 @@
 				<div class="order_detail" ><button class="order_detail_button" ><i class="fa-solid fa-list"></i><div>주문내역</div></button></div>
 				
 					<div class="user">
-					<div class="user_id">${ id }님</div>
+					<div class="user_id">
+					<a href="myOrder.do">
+						${ id }님
+					</a>
+					</div>
 					</div>
 					<button class="logout" onclick="location.href='memberLogout.do'">로그아웃</button>
 				</c:if>

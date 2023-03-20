@@ -21,15 +21,15 @@
 	
 	<div class="myOrder_content">
 		<table>
-		<thead>
+		
 			<tr>
 				<th>날짜</th>
 				<th>상품정보</th>
 				<th>배송상태</th>
 				<th>삭제</th>
 			</tr>
-		</thead>
-		<tbody>
+		
+		
 			<%-- <c:forEach var="order" items="${orders}"> --%>
 				<tr>
 					<td>2023-03-20</td>
@@ -39,7 +39,7 @@
 					
 				</tr>
 			<%-- </c:forEach> --%>
-		</tbody>
+		
 	</table>
 	</div>
 	

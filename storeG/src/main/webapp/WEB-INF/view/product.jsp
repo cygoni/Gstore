@@ -69,10 +69,11 @@
 							<div class="btn-group" role="group">
 								<button id="btnGroupDrop2" type="button"
 									class="btn btn-success dropdown-toggle" data-toggle="dropdown"
-									aria-haspopup="false" aria-expanded="false"></button>
+									aria-haspopup="true" aria-expanded="false"></button>
 								<div class="dropdown-menu" aria-labelledby="btnGroupDrop2"
-									style="display: block; opacity: 0;">
-									<a class="dropdown-item">업체조건배송</a> <a class="dropdown-item">Gstore직접배송</a>
+									style="display: none;">
+									<a class="dropdown-item">업체조건배송</a> 
+									<a class="dropdown-item">Gstore직접배송</a>
 									<a class="dropdown-item">본인직접수령</a>
 								</div>
 							</div>
@@ -82,14 +83,18 @@
 						$(function() {
 							// 드롭다운 버튼 클릭 시 메뉴 보이기
 							$("#btnGroupDrop2").click(function() {
-								$(".dropdown-menu").css("opacity", "1"); // 메뉴 보이기
+								/* $(".dropdown-menu").css("opacity", "1"); */ // 메뉴 보이기
+								$("#btnGroupDrop2").css("aria-expanded", "true");
+								$(".dropdown-menu").css("display", "block");
 							});
 
 							// 드롭다운 메뉴에서 아이템 클릭 시 버튼 내용 변경 및 메뉴 숨기기
 							$(".dropdown-item").click(function() {
 								var selectedItem = $(this).text(); // 선택한 아이템의 텍스트
 								$("#btn1").text(selectedItem); // 버튼 내용 변경
-								$(".dropdown-menu").css("opacity", "0"); // 메뉴 숨기기
+								/* $(".dropdown-menu").css("opacity", "0"); */ // 메뉴 숨기기
+								$("#btnGroupDrop2").css("aria-expanded", "false");
+								$(".dropdown-menu").css("display", "none");
 							});
 						});
 						$(function() {
@@ -167,7 +172,11 @@
 		<div class="">
 			<h2>상 품 후 기</h2>
 		</div>
-
+		<div class="pdt_review">
+			<div class="pdt_review_rating">별점</div>
+			<div class="pdt_review_content">상품이 맘에들어요 추천합니다</div>
+			<div class="pdt_review_writer">작성자:john123 등록일:2023.03.20</div>
+		</div>
 	</div>
 </div>
 
