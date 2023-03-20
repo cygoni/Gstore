@@ -22,10 +22,12 @@ public class MemberDAO {
 		session.close();
 		return memberId;
 	}
+	
 	public Member getOneMember(String id) {
 		   SqlSession session= MybatisConfig.getInstance().openSession(true);
-		   Member member = session.selectOne("mapper.user.getOneMember",id);
+		   Member member = session.selectOne("mapper.member.getOneMember",id);
 		   session.close();
+		   
 		   return member;
 	   }
 	

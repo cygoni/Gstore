@@ -16,7 +16,7 @@
 				</div>
 				<div class="mid_address">
 					<div class="info_address">주소</div>
-					<div class="user_address"><input name="address"></div>
+					<div class="user_address"><input id="address" name="address"></div>
 					<div class="content_mid_end"></div>
 
 				</div>
@@ -34,20 +34,20 @@
 				</div>
 				<div class="mid_mileage">
 					<div class="info_mileage">마일리지</div>
-					<div class="user_mileage">1000</div>
+					<div class="user_mileage">10000</div>
 					<div class="content_mid_end"></div>
 
 				</div>
 				<div class="mid_coupon">
 					<div class="info_coupon">쿠폰</div>
-					<div class="user_coupon">1개</div>
+					<div class="user_coupon">1</div>
 					<div class="content_mid_end"></div>
 
 
 				</div>
 				<div class="mid_money">
 					<div class="info_money">보유금액</div>
-					<div class="user_money">10000</div>
+					<div class="user_money">1000000</div>
 					<div class="content_mid_end"></div>
 
 				</div>

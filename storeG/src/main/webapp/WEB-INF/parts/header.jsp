@@ -43,6 +43,8 @@
 				</button></div>
 					
 				<div class="basket" ><button class="basket_button" ><i class="fa-solid fa-tag"></i><div>장바구니</div></button></div>
+				<div class="order_detail" ><button class="order_detail_button" ><i class="fa-solid fa-list"></i><div>주문내역</div></button></div>
+				
 					<div class="user">
 					<div class="user_id">${ id }님</div>
 					</div>
