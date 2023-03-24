@@ -1,18 +1,29 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ include file="../parts/header.jsp"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 
 <div class="product_container">
 	<hr style="border: 3px solid black;">
 	<div class="product_top">
 		<div class="product_top_left">
-			<img class="product_main" alt="" src="${ctx}/img/LostArk/loa01.jpg">
+			<img class="product_main" alt=""
+				src="${ctx}/img/${cateF}/${item.img}">
 			<ul class="product_ul">
-				<li><img alt="" src="${ctx}/img/LostArk/loa01.jpg"></li>
-				<li><img alt="" src="${ctx}/img/LostArk/loa01_a01.jpg"></li>
-				<li><img alt="" src="${ctx}/img/LostArk/loa01_a02.jpg"></li>
-				<li><img alt="" src="${ctx}/img/LostArk/loa01_a03.jpg"></li>
-				<li><img alt="" src="${ctx}/img/LostArk/loa01_a04.jpg"></li>
+				<li><img alt=" " src="${ctx}/img/${cateF}/${item.img}"></li>
+				<c:if test="${not empty item.img_hover}">
+					<c:set var="ah"
+						value="${fn:substring(item.img_hover, 1, fn:length(item.img_hover)-2)}" />
+					<c:set var="imgArr" value="${fn:split(ah, ',')}" />
+
+					<c:forEach var="img" items="${imgArr}">
+						<c:set var="imgWithoutQuotes"
+							value="${fn:replace(img, '\\\"', '')}" />
+						<%-- <c:out value="${ fn:trim(imgWithoutQuotes) }"></c:out> --%>
+						<li><img alt=""
+							src="${ctx}/img/${cateF}/${fn:trim(imgWithoutQuotes)}"></li>
+					</c:forEach>
+				</c:if>
 			</ul>
 		</div>
 		<script type="text/javascript">
@@ -32,11 +43,11 @@
 		<div class="product_top_right">
 			<img alt="" src="${ctx}/img/productEvent.jpg">
 			<div class="product_cate">
-				<span>카테고리 이름</span>
+				<span>${item.category}</span>
 			</div>
 			<div class="product_name">
 				<h2>
-					<p class="product_name_p">상품명들어갈 자리입니다</p>
+					<p class="product_name_p">${item.pName }</p>
 				</h2>
 			</div>
 			<p class="product_line"></p>
@@ -44,7 +55,7 @@
 				<dl>
 					<dt>판매가</dt>
 					<dd>
-						<strong class="product_price">price</strong>
+						<strong class="product_price">${item.price}</strong>
 					</dd>
 				</dl>
 				<dl>
@@ -72,8 +83,7 @@
 									aria-haspopup="true" aria-expanded="false"></button>
 								<div class="dropdown-menu" aria-labelledby="btnGroupDrop2"
 									style="display: none;">
-									<a class="dropdown-item">업체조건배송</a> 
-									<a class="dropdown-item">Gstore직접배송</a>
+									<a class="dropdown-item">업체조건배송</a> <a class="dropdown-item">Gstore직접배송</a>
 									<a class="dropdown-item">본인직접수령</a>
 								</div>
 							</div>
@@ -82,20 +92,26 @@
 					<script>
 						$(function() {
 							// 드롭다운 버튼 클릭 시 메뉴 보이기
-							$("#btnGroupDrop2").click(function() {
-								/* $(".dropdown-menu").css("opacity", "1"); */ // 메뉴 보이기
-								$("#btnGroupDrop2").css("aria-expanded", "true");
-								$(".dropdown-menu").css("display", "block");
-							});
+							$("#btnGroupDrop2").click(
+									function() {
+										/* $(".dropdown-menu").css("opacity", "1"); */// 메뉴 보이기
+										$("#btnGroupDrop2").css(
+												"aria-expanded", "true");
+										$(".dropdown-menu").css("display",
+												"block");
+									});
 
 							// 드롭다운 메뉴에서 아이템 클릭 시 버튼 내용 변경 및 메뉴 숨기기
-							$(".dropdown-item").click(function() {
-								var selectedItem = $(this).text(); // 선택한 아이템의 텍스트
-								$("#btn1").text(selectedItem); // 버튼 내용 변경
-								/* $(".dropdown-menu").css("opacity", "0"); */ // 메뉴 숨기기
-								$("#btnGroupDrop2").css("aria-expanded", "false");
-								$(".dropdown-menu").css("display", "none");
-							});
+							$(".dropdown-item").click(
+									function() {
+										var selectedItem = $(this).text(); // 선택한 아이템의 텍스트
+										$("#btn1").text(selectedItem); // 버튼 내용 변경
+										/* $(".dropdown-menu").css("opacity", "0"); */// 메뉴 숨기기
+										$("#btnGroupDrop2").css(
+												"aria-expanded", "false");
+										$(".dropdown-menu").css("display",
+												"none");
+									});
 						});
 						$(function() {
 							// 드롭다운 메뉴에서 아이템 클릭 시 버튼 내용 변경
@@ -110,7 +126,7 @@
 					<dt>주문수량</dt>
 					<dd>
 						<input type="text" name="pdt_qty" maxlength="4" pattern="[0-9]*"
-							value="1">
+							value="1"> <span class="pdt_ko">개</span>
 						<div class="updownbtn">
 							<div class="up">
 								<!-- <button class="btn btn-success"></button> -->
@@ -146,7 +162,7 @@
 												}
 											});
 						</script>
-						<span class="pdt_ko">개</span>
+
 					</dd>
 				</dl>
 			</form>
@@ -164,9 +180,24 @@
 		<div class="pdt_head">
 			<h2>제 품 설 명</h2>
 		</div>
-		<img alt="" src="${ctx}/img/LostArk/loa01_01.jpg"> <img alt=""
+		<%-- <img alt="" src="${ctx}/img/LostArk/loa01_01.jpg"> <img alt=""
 			src="${ctx}/img/LostArk/loa01_02.jpg">
+ --%>
+		<c:if test="${not empty item.data}">
+			<c:set var="data"
+				value="${fn:substring(item.data, 1, fn:length(item.data)-2)}" />
+			<c:set var="dataArr" value="${fn:split(data, ',')}" />
 
+			<c:forEach var="img2" items="${dataArr}">
+				<c:set var="imgWithoutQuotes2" value="${fn:replace(img2, '\\\"', '')}" />
+				<c:out value="${ fn:trim(imgWithoutQuotes2) }"></c:out> 
+				<img alt=""
+					src="${ctx}/img/${cateF}/${fn:trim(imgWithoutQuotes2)}">
+			</c:forEach>
+		</c:if>
+		<c:if test="${empty item.data}">
+			<img alt=" " src="${ctx}/img/${cateF}/${item.img}">
+		</c:if>
 	</div>
 	<div class="product_bot">
 		<div class="">

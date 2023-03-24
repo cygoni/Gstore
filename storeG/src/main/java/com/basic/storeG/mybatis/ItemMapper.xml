@@ -5,17 +5,24 @@
 <mapper namespace="mapper.item">
 	<resultMap type="com.basic.storeG.vo.Item" id="item">
 		<id column="item_no" property="itemNo"/>
-	    <result column="qty" property="quantity"/>
-	    <result column="img" property="image"/>
-	    <result column="pName" property="productName"/>
+	    <result column="qty" property="qty"/>
+	    <result column="img" property="img"/>
+	    <result column="pName" property="pName"/>
 	    <result column="price" property="price"/>
 	    <result column="category" property="category"/>
 	    <result column="rating" property="rating"/>
+	    <result column="img_hover" property="img_hover"/>
 	    <result column="data" property="data"/>
 	    <result column="register_date" property="registerDate"/>
 	</resultMap>
 	
+	<select id="getItemList" parameterType="int" resultMap="item">
+		select * from items where category=#{cate}
+	</select>
 	
+	<select id="getOneItem" resultMap="item">
+		select * from items where item_no = #{itemNo}
+	</select>
 	
 </mapper>
 

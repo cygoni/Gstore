@@ -10,14 +10,16 @@ public class Item {
     private int price;
     private int category;
     private double rating;
+    private String img_hover;
     private String data;
     private Date registerDate;
     
     
     public Item() {}
-    
-	public Item(int itemNo, int qty, String img, String pName, int price, int category, double rating, String data,
-			Date registerDate) {
+
+
+	public Item(int itemNo, int qty, String img, String pName, int price, int category, double rating, String img_hover,
+			String data, Date registerDate) {
 		super();
 		this.itemNo = itemNo;
 		this.qty = qty;
@@ -26,6 +28,7 @@ public class Item {
 		this.price = price;
 		this.category = category;
 		this.rating = rating;
+		this.img_hover = img_hover;
 		this.data = data;
 		this.registerDate = registerDate;
 	}
@@ -101,6 +104,16 @@ public class Item {
 	}
 
 
+	public String getImg_hover() {
+		return img_hover;
+	}
+
+
+	public void setImg_hover(String img_hover) {
+		this.img_hover = img_hover;
+	}
+
+
 	public String getData() {
 		return data;
 	}
@@ -120,6 +133,7 @@ public class Item {
 		this.registerDate = registerDate;
 	}
     
+	
     
     
     
