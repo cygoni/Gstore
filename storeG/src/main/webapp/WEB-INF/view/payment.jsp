@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script type="text/javascript" src="script/payment.js" defer></script>
 <meta charset="UTF-8">
 <title>결제 페이지</title>
 <%@ include file="../parts/header.jsp"%>
@@ -19,9 +20,12 @@
 			<div class="shipping_box">
 				<div class="innerBox">
 				<div class = "shipping_content">
-					<div class="name">박병준</div>
-					<div class="phone">010-1234-5678</div>
-					<div class="address">서울시 강남구 역삼동<div class="address_button">주소 찾기</div></div>
+					<div class="name">${vo.name}</div>
+					<div class="phone">${vo.phone}</div>
+					
+					<div class="address">${vo.address}<button class="address_button" id="member_post" readonly onclick="findAddr()">주소 찾기</button></div>
+				  <input id="member_addr" type="text" placeholder="Address" readonly> 
+  				  <input type="text" placeholder="Detailed Address">
 				</div>
 				</div>
 			</div>
@@ -35,10 +39,10 @@
 					<div class="innerBox">
 					<div class="discount_content">
 					<div class="mileage">
-						<input placeholder="마일리지사용"><div class="mileage_button">마일리지 사용</div>
+						<input placeholder="${vo.mileage}"><div class="mileage_button" onclick="#">마일리지 사용</div>
 						</div>
 						<div class="coupon">
-						<input placeholder="쿠폰사용"><div class="coupon_button">쿠폰 사용</div>
+						<input placeholder="${vo.coupons}"><div class="coupon_button" onclick="#">쿠폰 사용</div>
 						</div>
 					</div>
 					</div>
@@ -87,5 +91,5 @@
 
 </div>
 
-
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 <%@ include file="../parts/footer.jsp"%>

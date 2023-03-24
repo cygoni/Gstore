@@ -1,6 +1,8 @@
 package com.basic.storeG.member;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -29,7 +31,7 @@ public class MemberLoginController implements Controller {
 		vo.setId(id);
 		vo.setPw(pw);
 		
-		
+		PrintWriter out = response.getWriter();
 		String memberid = dao.memberLogin(vo);
 		
 		HttpSession session = request.getSession();
@@ -38,8 +40,14 @@ public class MemberLoginController implements Controller {
 			if(memberid.equals("admin")) {
 				session.setAttribute("admin", id);
 			}
+			
+			out.println("<script>alert('로그인 성공');location='main.do';</script>");
+			out.flush();
 			response.getWriter().print(memberid);
 		} else {
+			
+			out.println("<script>alert('로그인 실패');location='main.do';</script>");
+			out.flush();
 			response.getWriter().print("null");
 		}
 					

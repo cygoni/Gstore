@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<title>내정보 페이지</title>
+    pageEncoding="UTF-8"%>
+    <title>내정보 수정 페이지</title>
 <%@ include file="../parts/header.jsp"%>
+<script type="text/javascript" src="script/modify.js" defer></script>
+<form action="modify.do" method="post">
 <div class="myinfo_container">
 	<div class="session">
 		<div class="myinfo_content">
 
-			<div class="content_top"><h3>내정보</h3><button onclick= "location.href='myinfomodify.do'">내정보변경</button></div>
+			<div class="content_top"><h3>내정보수정</h3><input class="btn btn-outline-dark" type="button" onclick="validCheck(form)" value="내정보변경완료"></div>
 			
 			<div class="content_mid">
 				<div class="mid_name">
@@ -16,19 +18,19 @@
 				</div>
 				<div class="mid_address">
 					<div class="info_address">주소</div>
-					<div class="user_address">${vo.address}</div>
+					<div class="user_address"><input type="text" id="address" name="address" value="${vo.address}"></div>
 					<div class="content_mid_end"></div>
 
 				</div>
 				<div class="mid_phone_no">
 					<div class="info_phone_no">핸드폰 번호</div>
-					<div class="user_phone_no">${vo.phone}</div>
+					<div class="user_phone_no"><input type="tel" id="phone" name="phone" value="${vo.phone}" id="msg" data-val="${ctx}"></div>
 					<div class="content_mid_end"></div>
 
 				</div>
 				<div class="mid_email">
 					<div class="info_email">이메일</div>
-					<div class="user_email">${vo.email}</div>
+					<div class="user_email"><input type="email" id="email" name="email" value="${vo.email}"></div>
 					<div class="content_mid_end"></div>
 
 				</div>
@@ -59,4 +61,5 @@
 		</div>
 	</div>
 </div>
+</form>
 <%@ include file="../parts/footer.jsp"%>

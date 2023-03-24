@@ -2,12 +2,12 @@
     pageEncoding="UTF-8"%>
 <%@ include file ="../parts/header.jsp" %>
 
-<div class="myOrder_container">
+<div class="myOrder_container" style="border: 1px solid black">
 	<div class="myOrder_header">
 		<h2>주문내역</h2>
 	</div>
 	
-	<div class="myOrder_search">
+	<div class="myOrder_search" style="border: 1px solid black">
 		<span>기간별조회</span>
 		<button>1주일</button>
 		<button>15일</button>
@@ -19,19 +19,19 @@
 		<button>10월</button>
 	</div>
 	
-	<div class="myOrder_content">
+	<div class="myOrder_content" >
 		<table>
 		
 			<tr>
 				<th>날짜</th>
 				<th>상품정보</th>
 				<th>배송상태</th>
-				<th>삭제</th>
+				<th>비고</th>
 			</tr>
 		
 		
 			<%-- <c:forEach var="order" items="${orders}"> --%>
-				<tr>
+				<tr >
 					<td>2023-03-20</td>
 					<td>뭐 여러가지 상품이름 주문수량 주문번호 총가격(할인얼마나) 정도 </td>
 					<td>배송상태</td>
