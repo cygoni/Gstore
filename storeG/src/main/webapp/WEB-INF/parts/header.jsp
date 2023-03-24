@@ -43,7 +43,7 @@
 				</button></div>
 					
 				<div class="basket" ><button class="basket_button" ><i class="fa-solid fa-tag"></i><div>장바구니</div></button></div>
-				<div class="order_detail" ><button class="order_detail_button" ><i class="fa-solid fa-list"></i><div>주문내역</div></button></div>
+				<div class="order_detail" ><button class="order_detail_button" onclick="location.href='myOrder.do'" ><i class="fa-solid fa-list"></i><div>주문내역</div></button></div>
 				
 					<div class="user">
 					<div class="user_id">
@@ -68,18 +68,17 @@
 								<div class="member_login">
 									<form action="memberLogin.do" method="POST">
 										<div class="member_login_input">
-											<input type="text" name="id" placeholder="아이디">
+											<input type="text" name="id" placeholder="아이디" style="margin-bottom:10px">
 										</div>
 
 										<div class="member_login_input">
-											<input type="password" name="pw" placeholder="비밀번호">
+											<input type="password" name="pw" placeholder="비밀번호" style="margin-bottom:10px">
 										</div>
 
 										<div class="member_login_btn">
 
-											<input type="submit" class="btn btn-secondary" id="btn-login" value="로그인">
-											<input type="button" class="btn btn-secondary" value="회원가입"
-												onclick="location.href='/memberJoin.do'">
+											<input type="submit" class="btn btn-secondary" id="btn-login" value="로그인" style="margin-bottom:10px">
+											
 
 										</div>
 
@@ -90,7 +89,8 @@
 									</form>
 								</div>
 							</div>
-							<div class="modal-footer">
+							<div class="modal-footer" style="justify-content:center">
+							
 								<div class="login_api">
 									<a
 										href="https://kauth.kakao.com/oauth/authorize?client_id=d860d38c992ca8bf5f07dcc3fd5122b9&redirect_uri=http://localhost:9090/member/auth/kakao/callback&response_type=code"><img

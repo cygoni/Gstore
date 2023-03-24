@@ -16,7 +16,7 @@ register_date date
 
 CREATE TABLE members (
   member_no INT AUTO_INCREMENT PRIMARY KEY,
-  id VARCHAR(50),
+  id VARCHAR(50) unique key,
   pw VARCHAR(50),
   name VARCHAR(50),
   address VARCHAR(255),

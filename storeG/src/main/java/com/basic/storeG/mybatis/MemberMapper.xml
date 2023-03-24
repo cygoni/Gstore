@@ -5,29 +5,66 @@
 <mapper namespace="mapper.member">
 
 	<resultMap id="member" type="com.basic.storeG.vo.Member">
-		<id property="member_no" column="memberno"/>
-		<result column="id" property="id"/>
-	    <result column="pw" property="pw"/>
-	    <result column="name" property="name"/>
-	    <result column="address" property="address"/>
-	    <result column="mileage" property="mileage"/>
-	    <result column="coupons" property="coupons"/>
-	    <result column="wishlist" property="wishlist"/>
-	    <result column="cart" property="cart"/>
-	    <result column="order_history" property="orderHistory"/>
-	    <result column="money" property="money"/>
-	    <result column="review" property="review"/>
-	    <result column="phone" property="phone"/>
-	    <result column="email" property="email"/>
+		<id property="member_no" column="memberno" />
+		<result column="id" property="id" />
+		<result column="pw" property="pw" />
+		<result column="name" property="name" />
+		<result column="address" property="address" />
+		<result column="mileage" property="mileage" />
+		<result column="coupons" property="coupons" />
+		<result column="wishlist" property="wishlist" />
+		<result column="cart" property="cart" />
+		<result column="order_history" property="orderHistory" />
+		<result column="money" property="money" />
+		<result column="review" property="review" />
+		<result column="phone" property="phone" />
+		<result column="email" property="email" />
 	</resultMap>
-	
-	<select id="memberLogin" parameterType="member" resultType="String">
+
+	<select id="memberLogin" parameterType="member"
+		resultType="String">
 		select id from members where id=#{id} and pw = #{pw}
 	</select>
-	<select id="getOneMember" parameterType="String" resultMap="member">
+	<select id="getOneMember" parameterType="String"
+		resultMap="member">
 		select * from members where id=#{id}
 	</select>
-	
+
+	<select id="validId" resultType="int" parameterType="String">
+		select
+		count(1) from members where id=#{id}
+	</select>
+
+	<select id="validdateId" resultType="int" parameterType="String">
+		select
+		count(1) from members where id=#{id}
+	</select>
+
+	<insert id="memberInsert" parameterType="member">
+		insert into
+		members(id,pw,name,address,coupons,phone,email,money)
+		values(#{id},
+		#{pw},#{name},#{address},#{coupons},#{phone},#{email},#{money}
+		)
+
+	</insert>
+
+	<!-- <update id="updateMember" parameterType="member" > update members set 
+		address = #{address}, phone=#{phone},email=#{email} where id=#{id} </update> -->
+	<update id="updateMember" parameterType="member">
+		UPDATE members
+		SET 
+		address = #{address},
+		phone =#{phone},
+		email = #{email}
+		WHERE id = #{id} 
+	</update>
+	<delete id="deleteMember" parameterType="member">
+		delete from members
+		where id=#{id} and pw=#{pw}
+	</delete>
+
+
 </mapper>
 
 

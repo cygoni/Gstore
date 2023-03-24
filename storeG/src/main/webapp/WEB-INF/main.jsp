@@ -4,14 +4,13 @@
 		 <script type="text/javascript" src="script/main.js" defer>
 			</script>
 			<div class="top">
-				<img class="slide" src="img/main/header.png">
-				<img class="slide" src="img/main/main02.jpg">
-				<img class="slide" src="img/main/main03.jpg">
-				<img class="slide" src="img/main/main04.jpg">
-				<img class="slide" src="img/main/main05.jpg">
-				<img class="slide" src="img/main/main06.jpg">
-				<img class="slide" src="img/main/main07.jpg">
-				<img class="slide" src="img/main/main08.jpg">
+				<img class="slide" src="img/main/lostark.jpg">
+				<img class="slide" src="img/main/onepiece.jpg">
+				<img class="slide" src="img/main/overwatch.jpg">
+				<img class="slide" src="img/main/poketmon.jpg">
+				<img class="slide" src="img/main/silva.jpg">
+				<img class="slide" src="img/main/titan.jpg">
+			
 			</div>
 			<h1><a href="itemList.do">리스트go</a></h1>
 			<div class="new_item">
