@@ -697,11 +697,13 @@ dd input {
 	align-items: center;
 	justify-content: space-around;
 }
+.myOrder_header{
+	width: 100%;
+}
 .myOrder_content td,.myOrder_content th{
 	
 	
-	border:1px solid black;
-	width:25%;
+	border:1px solid black;;
 }
 .myOrder_content table{
 	width:100%;

@@ -43,7 +43,7 @@
 		<div class="product_top_right">
 			<img alt="" src="${ctx}/img/productEvent.jpg">
 			<div class="product_cate">
-				<span>${item.category}</span>
+				<span>${cateF}</span>
 			</div>
 			<div class="product_name">
 				<h2>
@@ -55,7 +55,7 @@
 				<dl>
 					<dt>판매가</dt>
 					<dd>
-						<strong class="product_price">${item.price}</strong>
+						<strong class="product_price">${item.price}원</strong>
 					</dd>
 				</dl>
 				<dl>
@@ -126,7 +126,7 @@
 					<dt>주문수량</dt>
 					<dd>
 						<input type="text" name="pdt_qty" maxlength="4" pattern="[0-9]*"
-							value="1"> <span class="pdt_ko">개</span>
+							value="1"> <span class="pdt_ko"> 개 </span>
 						<div class="updownbtn">
 							<div class="up">
 								<!-- <button class="btn btn-success"></button> -->
@@ -190,26 +190,26 @@
 
 			<c:forEach var="img2" items="${dataArr}">
 				<c:set var="imgWithoutQuotes2" value="${fn:replace(img2, '\\\"', '')}" />
-				<c:out value="${ fn:trim(imgWithoutQuotes2) }"></c:out> 
-				<img alt=""
-					src="${ctx}/img/${cateF}/${fn:trim(imgWithoutQuotes2)}">
-			</c:forEach>
-		</c:if>
-		<c:if test="${empty item.data}">
-			<img alt=" " src="${ctx}/img/${cateF}/${item.img}">
-		</c:if>
-	</div>
-	<div class="product_bot">
-		<div class="">
-			<h2>상 품 후 기</h2>
+						<c:out value="${ fn:trim(imgWithoutQuotes2) }"></c:out>
+						<img alt=""
+							src="${ctx}/img/${cateF}/${fn:trim(imgWithoutQuotes2)}">
+					</c:forEach>
+				</c:if>
+				<c:if test="${empty item.data}">
+					<img alt=" " src="${ctx}/img/${cateF}/${item.img}">
+				</c:if>
 		</div>
-		<div class="pdt_review">
-			<div class="pdt_review_rating">별점</div>
-			<div class="pdt_review_content">상품이 맘에들어요 추천합니다</div>
-			<div class="pdt_review_writer">작성자:john123 등록일:2023.03.20</div>
+		<div class="product_bot">
+			<div class="">
+				<h2>상 품 후 기</h2>
+			</div>
+			<div class="pdt_review">
+				<div class="pdt_review_rating">별점</div>
+				<div class="pdt_review_content">상품이 맘에들어요 추천합니다</div>
+				<div class="pdt_review_writer">작성자:john123 등록일:2023.03.20</div>
+			</div>
 		</div>
 	</div>
-</div>
 
 
-<%@ include file="../parts/footer.jsp"%>
+	<%@ include file="../parts/footer.jsp"%>
