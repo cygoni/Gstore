@@ -5,15 +5,16 @@
 <mapper namespace="mapper.order">
 	<resultMap type="com.basic.storeG.vo.Order" id="order">
 		<id column="order_no" property="orderNo" />
+		<result column="item" property="item" />
 		<result column="address" property="address" />
 		<result column="name" property="name" />
 		<result column="phone_number" property="phoneNumber" />
 		<result column="sales_price" property="salesPrice" />
 		<result column="discount_price" property="discountPrice" />
 		<result column="total_price" property="totalPrice" />
-		<result column="items" property="items" />
 		<result column="order_date" property="orderDate" />
 		<result column="delivery_status" property="deliveryStatus" />
+		<result column="cart_no" property="cart_no" />
 	</resultMap>
 	
 	

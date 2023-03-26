@@ -4,31 +4,41 @@ import java.security.Timestamp;
 
 public class Order {
 	private int orderNo;
+	private String item;
     private String address;
     private String name;
     private String phoneNumber;
     private int salesPrice;
     private int discountPrice;
     private int totalPrice;
-    private String items;
     private Timestamp orderDate;
     private int deliveryStatus;
+
     private int ordersqty;
+
+    private int cart_no;
+    
+
     public Order() {}
 
     
+
     
     public Order(int orderNo, String address, String name, String phoneNumber, int salesPrice, int discountPrice,
 			int totalPrice, String items, Timestamp orderDate, int deliveryStatus, int ordersqty) {
+
+	public Order(int orderNo, String address, String name, String phoneNumber, int salesPrice, int discountPrice,
+			int totalPrice, String item, Timestamp orderDate, int deliveryStatus) {
+
 		super();
 		this.orderNo = orderNo;
+		this.item = item;
 		this.address = address;
 		this.name = name;
 		this.phoneNumber = phoneNumber;
 		this.salesPrice = salesPrice;
 		this.discountPrice = discountPrice;
 		this.totalPrice = totalPrice;
-		this.items = items;
 		this.orderDate = orderDate;
 		this.deliveryStatus = deliveryStatus;
 		this.ordersqty = ordersqty;
@@ -78,11 +88,11 @@ public class Order {
 	public void setTotalPrice(int totalPrice) {
 		this.totalPrice = totalPrice;
 	}
-	public String getItems() {
-		return items;
+	public String getItem() {
+		return item;
 	}
-	public void setItems(String items) {
-		this.items = items;
+	public void setItem(String item) {
+		this.item = item;
 	}
 	public Timestamp getOrderDate() {
 		return orderDate;
@@ -96,11 +106,21 @@ public class Order {
 	public void setDeliveryStatus(int deliveryStatus) {
 		this.deliveryStatus = deliveryStatus;
 	}
+
 	public int getOrders_qty() {
 		return ordersqty;
 	}
 	public void setOrders_qty(int ordersqty) {
 		this.ordersqty = ordersqty;
+
+
+	public int getCart_no() {
+		return cart_no;
+	}
+
+	public void setCart_no(int cart_no) {
+		this.cart_no = cart_no;
+
 	}
     
 	
