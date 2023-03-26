@@ -6,6 +6,7 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.basic.storeG.util.MybatisConfig;
 import com.basic.storeG.vo.Item;
+import com.basic.storeG.vo.Member;
 
 public class ItemDAO {
 
@@ -32,4 +33,10 @@ public class ItemDAO {
 		return item;
 	}
 	
+	 public int addItems(Item item) {
+			SqlSession session= MybatisConfig.getInstance().openSession(true);
+			int cnt = session.insert("mapper.item.itemsInsert",item);
+			session.close();
+			return cnt;
+		}
 }

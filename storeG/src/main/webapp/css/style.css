@@ -27,7 +27,9 @@ table {
 header #logo {
 	display:inline-block;
 	justify-content:center;
-	margin:0 10% 0 20%;
+	margin:0 10% 0 15%;
+	
+	
 }
 
 .login {
@@ -67,13 +69,14 @@ header #logo {
 }
 .order_detail{
 	display: inline-block;
+	margin-right:10px;
 }
 .basket_button{
 	display: flex;
 	flex-direction:column;
 	background-color: #02b875;
-	width: 80px;
-	height:60px;
+	width: 40px;
+	height:40px;
 	border-radius: 5px;
 	color: #fff;
 	align-items:center; 
@@ -93,14 +96,16 @@ header #logo {
 	opacity:1;
 }
 .order_detail_button{
+	
 	display: flex;
 	flex-direction:column;
 	background-color: #02b875;
-	width: 80px;
-	height:60px;
+	width: 40px;
+	height:40px;
 	border-radius: 5px;
 	color: #fff;
 	align-items:center; 
+	
 	
 }
 .order_detail_button svg{
@@ -129,26 +134,19 @@ header #logo {
 	
 	display: flex;
 	flex-direction:column;
-	background-color: #02b875;
-	width: 80px;
-	height:60px;
+	background-color: white;
+	width: 40px;
+	height:40px;
 	border-radius: 5px;
 	color: #fff;
 	align-items:center;
+	background-color: #02b875;
 	
 }
 .myinfo_button svg{
 	margin-top: 5px;
 	width: 25px;
 	height:25px;
-}
-.myinfo_button div{
-	display: inline-block;
-	opacity:0;
-}
-
-.myinfo_button div:hover{
-	opacity:1;
 }
 
 .join {
@@ -165,8 +163,7 @@ header #logo {
 }
 
 header #logo img {
-	width: 100px;
-	height: 100px;
+	width: 200px;
 }
 
 session {
@@ -178,10 +175,12 @@ session {
 }
 
 header {
-	width:1200px;
+	width:100%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	background-color: #02b875;
+	padding-bottom:20px;
 	
 }
 
@@ -207,18 +206,16 @@ button {
 }
 
 
-header .search_main{
+.search_main{
 	padding:0;
 	margin-left:0;
 	display:inline-block;
 	width: 218px;
+	align-items: center;
+	
 }
 
-.search_main {
-	display: flex;
-	width: 218px;
-	align-items: center;
-}
+
 
 .search_div {
 	width: 200px;
@@ -227,7 +224,7 @@ header .search_main{
 	padding: 2px 40px 0 20px;
 	box-sizing: border-box;
 	background-color: transparent;
-	border: 1px solid rgba(0, 0, 0, .2);
+	border: 1px solid black;
 	border-radius: 20px;
 	background-clip: padding-box;
 }
@@ -238,8 +235,11 @@ header .search_main{
 	border: none;
 	line-height: 36px;
 	font-size: 12px;
-	color: #000;
+	color: black;
 	outline: none;
+}
+input::placeholder{
+	color:black;
 }
 
 .search_span {
@@ -430,7 +430,7 @@ h1 {
 	margin: 10px 0;
 }
 
-.product_price, .discount_price, .total_price {
+.product-price, .discount_price, .total_price {
 	margin-bottom: 10px;
 	display: flex;
 	justify-content: space-between;
@@ -605,6 +605,24 @@ dd input {
 	margin:10px;
 	border-radius: 8px;
 }
+.myinfo_top_content{
+	display:inline-block;
+	text-align: center;
+	height:100%;
+	
+}
+.myinfo-top-content_container{
+	width:100%;
+	height:100%;
+	display: flex;
+	justify-content: center;
+	align-items:center;
+}
+.myinfo_button, .basket_button , .order_detail_button {
+	display: flex;
+	justify-content: center;
+	
+}
 
 .content_top{
 	display: flex;
@@ -649,8 +667,9 @@ dd input {
 	justify-content: space-around;
 	width: 1200px;
 }
-.cate_img{
+.cate_img img{
 	width:1200px;
+	height:511px;
 }
 .cate_name{
 	margin:20px 0 0 50px;
@@ -660,7 +679,7 @@ dd input {
 
 .footer_container {
 	display: flex; background-color : lightgray;
-	width: 1200px;
+	width: 100%;
 	align-items: center;
 	justify-content: center;
 	background-color: lightgray;
@@ -712,3 +731,43 @@ dd input {
 	display: flex;
 	justify-content: flex-start;
 }
+
+.product_content_name,
+.product_content_qty,
+.product_content_price,
+.product_content_delivery_date
+
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.itemsinsert_content td{
+	display: flex;
+	justify-content: flex-start;
+}
+.itemsinsert_container{
+	width: 1200px;
+	margin-top:20px;
+}
+.itemsinsert_content{
+	width:100%;
+	margin-bottom:20px;
+}
+.itemsinsert_footer{
+	margin-bottom:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -37,7 +37,7 @@ public class MemberDAO {
 		   int cnt=session.selectOne("mapper.member.validdateId", Id);
 		   session.close();
 		   return cnt;
-	   }
+	}
 	 public int memberUpdate(Member user) {
 		   SqlSession session= MybatisConfig.getInstance().openSession(true);
 		   int cnt= session.update("mapper.member.updateMember",user);
@@ -57,6 +57,7 @@ public class MemberDAO {
 		   int cnt=session.delete("mapper.member.deleteMember", member);
 		   session.close();
 		   return cnt;
-	   }
+	 }
+	
 	   
 }

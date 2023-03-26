@@ -40,18 +40,18 @@
 			}
 		</script>
 
+			<form action="payment.do?itemNo=${item.itemNo}" method="post">
 		<div class="product_top_right">
 			<img alt="" src="${ctx}/img/productEvent.jpg">
 			<div class="product_cate">
 				<span>${item.category}</span>
 			</div>
-			<div class="product_name">
+			<div class="product_name" name="pName">
 				<h2>
-					<p class="product_name_p">${item.pName }</p>
+					<p class="product_name_p" >${item.pName }</p>
 				</h2>
 			</div>
 			<p class="product_line"></p>
-			<form action="##" method="post">
 				<dl>
 					<dt>판매가</dt>
 					<dd>
@@ -165,12 +165,12 @@
 
 					</dd>
 				</dl>
-			</form>
 			<div class="pdt_btn3">
 				<button class="btn btn-success">찜하기</button>
-				<button class="btn btn-success">바로구매</button>
+				<button type="submt" class="btn btn-success">바로구매</button>
 				<button class="btn btn-success">장바구니</button>
 			</div>
+			</form>
 		</div>
 	</div>
 

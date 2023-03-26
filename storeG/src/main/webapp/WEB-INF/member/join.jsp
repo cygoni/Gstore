@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@ include file="../parts/header.jsp"%>
 <script type="text/javascript" src="script/join.js" defer></script>
-<link rel="stylesheet" type="text/css" href="${ctx}/css/member.css">
+<link rel="stylesheet" type="text/css" href="${ctx}/css/style.css">
 <div class="join_container">
 	<form action="memberJoin.do" method="post">
 		<table class="join_content" style="border: 1px solid black">

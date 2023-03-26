@@ -13,11 +13,13 @@ public class Order {
     private String items;
     private Timestamp orderDate;
     private int deliveryStatus;
-    
+    private int ordersqty;
     public Order() {}
+
     
-	public Order(int orderNo, String address, String name, String phoneNumber, int salesPrice, int discountPrice,
-			int totalPrice, String items, Timestamp orderDate, int deliveryStatus) {
+    
+    public Order(int orderNo, String address, String name, String phoneNumber, int salesPrice, int discountPrice,
+			int totalPrice, String items, Timestamp orderDate, int deliveryStatus, int ordersqty) {
 		super();
 		this.orderNo = orderNo;
 		this.address = address;
@@ -29,7 +31,11 @@ public class Order {
 		this.items = items;
 		this.orderDate = orderDate;
 		this.deliveryStatus = deliveryStatus;
+		this.ordersqty = ordersqty;
 	}
+
+
+
 	public int getOrderNo() {
 		return orderNo;
 	}
@@ -90,6 +96,13 @@ public class Order {
 	public void setDeliveryStatus(int deliveryStatus) {
 		this.deliveryStatus = deliveryStatus;
 	}
+	public int getOrders_qty() {
+		return ordersqty;
+	}
+	public void setOrders_qty(int ordersqty) {
+		this.ordersqty = ordersqty;
+	}
     
+	
     
 }

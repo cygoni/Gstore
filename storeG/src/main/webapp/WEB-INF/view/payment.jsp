@@ -61,16 +61,16 @@
 				<div class="innerBox">
 				
 				<div class="product_content">
-				<p>상품명</p>
-				<p>수량</p>
-				<p>가격</p>
-				<p>도착예상날짜</p>
+					<div class="product_content_name"><div class="product_name">상품명 :</div ><div class="item_name"><p>${item.pName}</p></div></div>
+					<div class="product_content_qty"><div class="product_qty">상품 수량 :</div ><div class="item_qty"><p>1개</p></div></div>
+					<div class="product_content_price"><div class="product_price">상품 가격 :</div ><div class="item_price"><p>${item.price}원</p></div></div>
+					<div class="product_content_delivery_date"><div class="delivery_date">도착 예상날짜 :</div><div class="item_delivery_date"><p>도착예상날짜</p></div></div>
 				</div>
 					
 					<div class="price_box">
-					  <div class="product_price">
+					  <div class="product-price">
 					    <div class="product-label">상품금액</div>
-					    <div class="product-value">20,000원</div>
+					    <div class="product-value">${item.price}원</div>
 					  </div>
 					  <div class="discount_price">
 					    <div class="product-label">할인금액</div>
@@ -78,7 +78,7 @@
 					  </div>
 					  <div class="total_price">
 					    <div class="product-label">총 결제 금액</div>
-					    <div class="product-value">18,000원</div>
+					    <div class="product-value">${item.price}원</div>
 					  </div>
 					</div>		
 					<div class="payment-button">결제하기</div>

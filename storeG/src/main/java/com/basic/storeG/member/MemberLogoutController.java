@@ -24,7 +24,9 @@ public class MemberLogoutController implements Controller {
 		
 		PrintWriter out = response.getWriter();
 	
-		out.println("<script>alert('로그아웃하셨습니다');</script>");
+		out.println("<script>alert('로그아웃하셨습니다');location='main.do'</script>");
+		out.flush();
+		out.close();
 		session.removeAttribute("id");
 		
 		

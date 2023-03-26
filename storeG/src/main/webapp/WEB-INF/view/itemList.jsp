@@ -4,7 +4,7 @@
 
 <div class="cate_container">
 	<div class="cate_img">
-		<img alt="" src="${ ctx }/img/cateImg.png" style="width: 100%;">
+		<img alt="" src="img/main/silva.jpg" style="width: 100%;">
 	</div>
 	<div class="cate_name">
 		<h2>카테고리 이름</h2>

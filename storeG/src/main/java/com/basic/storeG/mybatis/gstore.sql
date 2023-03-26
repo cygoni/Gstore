@@ -39,6 +39,7 @@ CREATE TABLE orders (
   sales_price INT,
   discount_price INT,
   total_price INT,
+  orders_qty int,
   items JSON,
   order_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   delivery_status int
@@ -87,4 +88,39 @@ INSERT INTO items (qty, img, pName, price, category, rating, img_hover, data, re
 (10, 'loa08.jpg', '로스트아크 기분 좋은 모코코 인형', 30000, 1, 0, '["loa08_hover"]', '["loa08_01.jpg","loa08_02.jpg"]', NOW()),
 (10, 'loa09.jpg', '로스트아크 늘푸른 모코코 인형', 30000, 1, 0, '["loa09_hover"]', '["loa09_01.jpg","loa09_02.jpg"]', NOW()),
 (10, 'loa10.jpg', '로스트아크 벚꽃 모코코 인형', 30000, 1, 0, '["loa10_hover"]', '["loa10_01.jpg","loa10_02.jpg"]', NOW());
+
+INSERT INTO items (qty, img, pName, price, category, rating, img_hover, data, register_date) VALUES 
+(10,'poket01.jpg','포켓몬스터 고라파덕 피규어',10000,4,0,null,null,now()),
+(10,'poket02.jpg','포케손스터 리자몽 피규어',15000,4,0,null,null,now()),
+(10,'poket03.jpg','포켓몬스터 뮤 피규어',20000,4,0,null,null,now()),
+(10,'poket04.jpg','포켓몬스터 뮤츠 피규어',30000,4,0,null,null,now()),
+(10,'poket05.png','포켓몬스터 잠만보 피규어',25000,4,0,null,null,now()),
+(10,'poket06.jpg','포켓몬스터 탕구리 피규어',20000,4,0,null,null,now()),
+(10,'poket07.jpg','포켓몬스터 파이리 피규어',15000,4,0,null,null,now()),
+(10,'poket08.jpg','포켓몬스터 푸린 피규어',15000,4,0,null,null,now()),
+(10,'poket09.jpg','포켓몬스터 피카츄 피규어',15000,4,0,null,null,now()),
+(10,'poket10.jpg','포켓몬스터 이브이 피규어',15000,4,0,null,null,now()),
+(10,'poket11.jpg','포켓몬스터 닥트리오 피규어',15000,4,0,'["poketmon11_hover.jpg"]','["poketmon11_01.jpg"]',now());
+
+INSERT INTO items (qty, img, pName, price, category, rating, img_hover, data, register_date) VALUES 
+(10,'t01.jpg','진격의 거인 리바이 피규어',15000,5,0,'["t01_01.jpg","t01_02.jpg","t01_03.jpg","t01_04.jpg"]','["t01_01.jpg","t01_02.jpg","t01_03.jpg","t01_04.jpg"]',now()),
+(10,'t02.jpg','진격의 거인 엘렌예거 피규어',18000,5,0,'["t02_01.jpg","t02_02.jpg","t02_03.jpg","t02_04.jpg","t02_05.jpg"]','["t02_01.jpg","t02_02.jpg","t02_03.jpg","t02_04.jpg","t02_05.jpg"]',now()),
+(10,'t03.jpg','진격의 거인 엘렌예거 거인화 피규어',30000,5,0,'["t03_01.jpg","t03_02.jpg","t03_03.jpg"]','["t03_01.jpg","t03_02.jpg","t03_03.jpg","t03_04.jpg","t03_05.jpg","t03_06.jpg","t03_07.jpg"]',now()),
+(10,'t04.jpg','진격의 거인 미카사 피규어',18000,5,0,'["t04_01.jpg","t04_02.jpg","t04_03.jpg","t04_04.jpg"]','["t04_01.jpg","t04_02.jpg","t04_03.jpg","t04_04.jpg","t04_05.jpg","t04_06.jpg","t04_07.jpg"]',now()),
+(10,'t05.jpg','진격의 거인 엘런스미스 피규어',15000,5,0,'["t05_01.jpg","t05_02.jpg","t05_03.jpg","t05_04.jpg"]','["t05_01.jpg","t05_02.jpg","t05_03.jpg","t05_04.jpg","t05_05.jpg","t05_06.jpg","t05_07.jpg","t05_08.jpg","t05_09.jpg"]',now()),
+(10,'t06.jpg','진격의 거인 엘런스미스 캐릭터화 피규어',10000,5,0,'["t06_01.jpg","t06_02.jpg","t06_03.jpg","t06_04.jpg"]','["t06_01.jpg","t06_02.jpg","t06_03.jpg","t06_04.jpg","t06_06.jpg"]',now()),
+(10,'t07.jpg','진격의 거인 한지조에 캐릭터화 피규어',10000,5,0,'["t07_01.jpg","t07_02.jpg","t07_03.jpg","t07_04.jpg"]','["t07_01.jpg","t07_02.jpg","t07_03.jpg","t07_04.jpg"]',now()),
+(10,'t08.jpg','진격의 거인 미카사 캐릭터화 피규어',10000,5,0,'["t08_01.jpg","t08_02.jpg","t08_03.jpg","t08_04.jpg"]','["t08_01.jpg","t08_02.jpg","t08_03.jpg","t08_04.jpg"]',now());
+
+INSERT INTO items (qty, img, pName, price, category, rating, img_hover, data, register_date) VALUES 
+(10,'one01.jpg','원피스 나미 피규어',15000,6,0,'["one01_01.jpg","one01_02.jpg","one01_03.jpg","one01_04.jpg","one01_05.jpg"]','["one01_01.jpg","one01_02.jpg","one01_03.jpg","one01_04.jpg","one01_05.jpg"]',now()),
+(10,'one02.jpg','원피스 루피 피규어',20000,6,0,'["one02_01.jpg","one02_02.jpg","one02_03.jpg"]','["one02_01.jpg","one02_02.jpg","one02_03.jpg"]',now()),
+(10,'one03.jpg','원피스 니코로빈 피규어',20000,6,0,'["one03_01.jpg","one03_02.jpg"]','["one03_01.jpg","one03_02.jpg"]',now()),
+(10,'one04.jpg','원피스 조로 피규어',25000,6,0,'["one04_01.jpg","one04_02.jpg","one04_03.jpg"]','["one04_01.jpg","one04_02.jpg","one04_03.jpg"]',now()),
+(10,'one05.jpg','원피스 상디 피규어',20000,6,0,'["one05_01.jpg","one05_02.jpg","one05_03.jpg","one05_04.jpg"]','["one05_01.jpg","one05_02.jpg","one05_03.jpg","one05_04.jpg"]',now()),
+(10,'one06.jpg','원피스 프랑키 피규어',20000,6,0,'["one06_01.jpg","one06_02.jpg","one06_03.jpg","one06_04.jpg"]','["one06_01.jpg","one06_02.jpg","one06_03.jpg","one06_04.jpg"]',now()),
+(10,'one07.jpg','원피스 브룩 피규어',20000,6,0,'["one07_01.jpg","one07_02.jpg","one07_03.jpg","one07_04.jpg","one07_05.jpg"]','["one07_01.jpg","one07_02.jpg","one07_03.jpg","one07_04.jpg","one07_05.jpg"]',now()),
+(10,'one08.jpg','원피스 우솝 피규어',15000,6,0,'["one08_01.jpg","one08_02.jpg","one08_03.jpg","one08_04.jpg"]','["one08_01.jpg","one08_02.jpg","one08_03.jpg","one08_04.jpg"]',now()),
+(10,'one09.jpg','원피스 쵸파 피규어',20000,6,0,'["one09_01.jpg","one09_02.jpg","one09_03.jpg"]','["one09_01.jpg","one09_02.jpg","one09_03.jpg"]',now()),
+(10,'one10.jpg','원피스 에이스 피규어',50000,6,0,'["one10_01.jpg","one10_02.jpg","one10_03.jpg","one10_04.jpg"]','["one10_01.jpg","one10_02.jpg","one10_03.jpg","one10_04.jpg","one10_05.jpg","one10_06.jpg","one10_07.jpg"]',now());
 

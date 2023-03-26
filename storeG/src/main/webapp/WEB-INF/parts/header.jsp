@@ -30,29 +30,34 @@
 					</div>
 				</div>
 				<div id="logo">
-					<a href="main.do"><img src="img/logo.jpg"></a>
+					<a href="main.do"><img src="img/logo.png"></a>
 				</div>
 				<c:if test="${ empty id }">
 					<button class="login" data-toggle="modal" data-target="#exampleModal">로그인</button>
 					<button class="join" onclick="location.href = 'joinPage.do'">회원가입</button>
 				</c:if>
+				
 				<c:if test="${ not empty id }">
+				<div class = "myinfo_top_content">
+				<div class = "myinfo-top-content_container">
 				<div class="myinfo"><button class="myinfo_button" onclick="location.href='myinfo.do'">
 				<i class="fa-solid fa-person"></i>
-				<div>내정보</div>
+				
 				</button></div>
 					
-				<div class="basket" ><button class="basket_button" ><i class="fa-solid fa-tag"></i><div>장바구니</div></button></div>
-				<div class="order_detail" ><button class="order_detail_button" onclick="location.href='myOrder.do'" ><i class="fa-solid fa-list"></i><div>주문내역</div></button></div>
+				<div class="basket" ><button class="basket_button" ><i class="fa-solid fa-tag"></i></button></div>
+				<div class="order_detail" ><button class="order_detail_button" onclick="location.href='myOrder.do'" ><i class="fa-solid fa-list"></i></button></div>
 				
 					<div class="user">
 					<div class="user_id">
-					<a href="myOrder.do">
+					<div style="color:white">
 						${ id }님
-					</a>
+					</div>
 					</div>
 					</div>
 					<button class="logout" onclick="location.href='memberLogout.do'">로그아웃</button>
+				</div>
+					</div>
 				</c:if>
 				<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
 					aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -77,7 +82,7 @@
 
 										<div class="member_login_btn">
 
-											<input type="submit" class="btn btn-secondary" id="btn-login" value="로그인" style="margin-bottom:10px">
+											<input type="submit" class="btn btn-secondary" id="btn-login" value="로그인">
 											
 
 										</div>
