@@ -168,11 +168,16 @@
 			</form>
 			<div class="pdt_btn3">
 				<button class="btn btn-success">찜하기</button>
-				<button class="btn btn-success">바로구매</button>
-				<button class="btn btn-success">장바구니</button>
+				<button class="btn btn-success" onclick="location.href='payment.do'">바로구매</button>
+				<button class="btn btn-success" onclick="location.href=`cart.do?item_no=${item.itemNo}`">장바구니</button>
 			</div>
 		</div>
 	</div>
+	
+	<%-- 
+	onclick="location.href='payment.do'"
+	 onclick="location.href='cart.do?item_no=${item.item_no}'"
+	 --%>
 
 	<hr style="border: 2px solid black;">
 
@@ -180,9 +185,7 @@
 		<div class="pdt_head">
 			<h2>제 품 설 명</h2>
 		</div>
-		<%-- <img alt="" src="${ctx}/img/LostArk/loa01_01.jpg"> <img alt=""
-			src="${ctx}/img/LostArk/loa01_02.jpg">
- --%>
+		
 		<c:if test="${not empty item.data}">
 			<c:set var="data"
 				value="${fn:substring(item.data, 1, fn:length(item.data)-2)}" />

@@ -8,7 +8,7 @@
 		<!--          						  vo       변수명   -->
 		<typeAlias type="com.basic.storeG.vo.Item" alias="item"/>
 		<typeAlias type="com.basic.storeG.vo.Member" alias="member"/>
-		<!-- <typeAlias type="com.basic.storeG.vo.Cart" alias="cart"/> -->
+		<typeAlias type="com.basic.storeG.vo.Cart" alias="cart"/>
 		<!-- <typeAlias type="com.basic.storeG.vo.Order" alias="order"/>
 		<typeAlias type="com.basic.storeG.vo.Review" alias="review"/> -->
 	</typeAliases>
@@ -28,7 +28,7 @@
 	<mappers>
 	    <mapper resource="com/basic/storeG/mybatis/MemberMapper.xml"/>
 	    <mapper resource="com/basic/storeG/mybatis/ItemMapper.xml"/>
-	    <!-- <mapper resource="com/basic/storeG/mybatis/CartMapper.xml"/> -->
+	    <mapper resource="com/basic/storeG/mybatis/CartMapper.xml"/>
 	    <!-- <mapper resource="com/basic/storeG/mybatis/OrderMapper.xml"/>
 	    <mapper resource="com/basic/storeG/mybatis/ReviewMapper.xml"/> -->
 	  </mappers>
