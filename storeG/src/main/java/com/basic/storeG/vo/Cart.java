@@ -4,13 +4,14 @@ public class Cart {
 	
 	private int cart_no;
 	private String items;
-	private String name;
-	
-	public Cart(int cart_no, String items, String name) {
+	private String id;
+	private boolean purchased;
+	public Cart(int cart_no, String items, String id, boolean purchased) {
 		super();
 		this.cart_no = cart_no;
 		this.items = items;
-		this.name = name;
+		this.id = id;
+		this.purchased = purchased;
 	}
 	public int getCart_no() {
 		return cart_no;
@@ -24,12 +25,19 @@ public class Cart {
 	public void setItems(String items) {
 		this.items = items;
 	}
-	public String getName() {
-		return name;
+	public String getId() {
+		return id;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setId(String id) {
+		this.id = id;
 	}
+	public boolean isPurchased() {
+		return purchased;
+	}
+	public void setPurchased(boolean purchased) {
+		this.purchased = purchased;
+	}
+	
 	
 	
 }

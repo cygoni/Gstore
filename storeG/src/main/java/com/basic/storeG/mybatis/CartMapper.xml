@@ -5,9 +5,72 @@
 <mapper namespace="mapper.cart">
 	<resultMap type="com.basic.storeG.vo.Cart" id="cart">
 		<id column="cart_no" property="cart_no" />
-		<result column="name" property="name" />
-		<result column="itmes" property="items" />
+		<result column="id" property="id" />
+		<result column="items" property="items" />
+		<result column="purchased" property="purchased" />
 	</resultMap>
+
+	<select id="checkCartId" parameterType="string"
+		resultType="boolean">
+		SELECT EXISTS (SELECT * FROM cart WHERE id = #{id})
+	</select>
+
+	<select id="checkCartItem" parameterType="int"
+		resultType="boolean">
+		SELECT EXISTS (SELECT * FROM cart WHERE
+		JSON_CONTAINS(items,
+		CAST(CONCAT('[', #{item_no}, ']') AS JSON), '$'))
+	</select>
+
+	<insert id="addNewCart" parameterType="map">
+		INSERT INTO cart (items,
+		id, purchased)
+		VALUES (
+		JSON_ARRAY(
+		JSON_OBJECT(
+		'item_no', #{item_no},
+		'qty', 1
+		)
+		),
+		#{id},
+		0
+		)
+	</insert>
+
+	<select id="checkP" parameterType="String" resultType="boolean">
+		SELECT
+		EXISTS (SELECT * FROM cart WHERE id = #{id} AND purchased = 0)
+	</select>
+
+	<select id="getCart" resultType="Cart" parameterType="String">
+		SELECT *
+		FROM cart WHERE id = #{id} AND purchased = 0
+	</select>
+
+	<select id="checkItem" resultType="boolean"
+		parameterType="java.util.Map">
+		SELECT EXISTS(SELECT 1 FROM cart_item WHERE cart_no =
+		#{cart_no} AND item_no
+		= #{item_no})
+	</select>
+
+	<update id="updateQty" parameterType="map">
+		UPDATE cart
+		SET items =
+		JSON_REPLACE(items, CONCAT('$[', JSON_SEARCH(items, 'one',
+		CONCAT('{"item_no":', #{item_no}, '}')), '].qty'), JSON_EXTRACT(items,
+		CONCAT('$[', JSON_SEARCH(items, 'one', CONCAT('{"item_no":',
+		#{item_no}, '}')), '].qty') + 1))
+		WHERE cart_no = #{cart_no}
+	</update>
+
+	<update id="addItem" parameterType="map">
+		UPDATE cart
+		SET items = JSON_ARRAY_APPEND(items, '$', JSON_OBJECT('item_no',
+		#{item_no}, 'qty', 1))
+		WHERE cart_no = #{cart_no}
+	</update>
+
 
 </mapper>
   

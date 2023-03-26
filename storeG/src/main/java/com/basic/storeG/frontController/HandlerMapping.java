@@ -2,7 +2,7 @@ package com.basic.storeG.frontController;
 
 import java.util.HashMap;
 
-
+import com.basic.storeG.cart.CartController;
 import com.basic.storeG.controller.MainController;
 
 import com.basic.storeG.controller.paymentController;
@@ -48,6 +48,8 @@ public class HandlerMapping {
 		mappings.put("/modify.do", new modifyController());
 		mappings.put("/myOrder.do", new MyOrderController());
 		mappings.put("/deleteMember.do",new deleteMemberController());
+		
+		mappings.put("/cart.do", new CartController());
 	}
 
 	public Controller getController(String key) {
