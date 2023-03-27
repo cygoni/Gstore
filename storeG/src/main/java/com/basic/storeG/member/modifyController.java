@@ -25,7 +25,6 @@ public class modifyController implements Controller {
 		String phone = request.getParameter("phone");
 		String address = request.getParameter("address");
 		
-		
 		Member member = MemberDAO.getInstance().getOneMember(id);
 		
 		request.setAttribute("vo", member);

@@ -192,14 +192,26 @@
 					<img alt=" " src="${ctx}/img/${cateF}/${item.img}">
 				</c:if>
 		</div>
-		<div class="product_bot">
-			<div class="">
+		<div class="product_bot" style="border:1px solid">
+			<div class="" style="border:1px solid">
 				<h2>상 품 후 기</h2>
 			</div>
-			<div class="pdt_review">
-				<div class="pdt_review_rating">별점</div>
+			<div class="pdt_review" >
+				<div class="pdt_review_rating">
+					<form name="myform" id="myform" method="post" action="./save">
+					    <fieldset>
+					        <h3>평점</h3>
+					        <input type="radio" name="rating" value="5" id="rate1"><label for="rate1">⭐</label>
+					        <input type="radio" name="rating" value="4" id="rate2"><label for="rate2">⭐</label>
+					        <input type="radio" name="rating" value="3" id="rate3"><label for="rate3">⭐</label>
+					        <input type="radio" name="rating" value="2" id="rate4"><label for="rate4">⭐</label>
+					        <input type="radio" name="rating" value="1" id="rate5"><label for="rate5">⭐</label>
+					    </fieldset>
+					</form>
+				</div>
 				<div class="pdt_review_content">상품이 맘에들어요 추천합니다</div>
-				<div class="pdt_review_writer">작성자:john123 등록일:2023.03.20</div>
+				<div class="pdt_review_writer">작성자:user1</div>
+				<div class="pdt_review_date">등록일:2023.03.27</div>
 			</div>
 		</div>
 	</div>
