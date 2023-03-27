@@ -8,6 +8,7 @@ import com.basic.storeG.controller.MainController;
 
 import com.basic.storeG.controller.paymentController;
 import com.basic.storeG.item.DeleteOrderController;
+
 import com.basic.storeG.item.ItemListController;
 import com.basic.storeG.item.ProductController;
 import com.basic.storeG.item.itemsInsertController;
@@ -32,26 +33,26 @@ public class HandlerMapping {
 		mappings.put("/main.do", new MainController());
 		mappings.put("/memberLogin.do", new MemberLoginController());
 		mappings.put("/memberLogout.do", new MemberLogoutController());
-		
+
 		mappings.put("/joinPage.do", new JoinPageController());
 		mappings.put("/memberJoin.do", new MemberJoinController());
 		mappings.put("/validateId.do", new ValidateIdController());
-		
-		
+
 		mappings.put("/itemList.do", new ItemListController());
+
 		mappings.put("/itemsInsertPage.do", new itemsInsertPageController());
 		mappings.put("/itemsInsert.do", new itemsInsertController());
 		mappings.put("/product.do", new ProductController());
-		
+
 		mappings.put("/payment.do", new paymentController());
-		
+
 		mappings.put("/myinfo.do", new myinfoController());
 		mappings.put("/myinfomodify.do", new myinfomodifyController());
 		mappings.put("/modify.do", new modifyController());
 		mappings.put("/myOrder.do", new MyOrderController());
 		mappings.put("/deleteOrder.do", new DeleteOrderController());
-		mappings.put("/deleteMember.do",new deleteMemberController());
-		
+		mappings.put("/deleteMember.do", new deleteMemberController());
+
 		mappings.put("/cart.do", new CartController());
 		mappings.put("/cartList.do", new CartListController());
 	}
