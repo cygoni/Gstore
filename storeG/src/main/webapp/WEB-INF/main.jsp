@@ -13,6 +13,11 @@
 			
 			</div>
 			<h1><a href="itemList.do">리스트go</a></h1>
+			<h1><a href="itemList2.do">오버워치</a></h1>
+			<h1><a href="itemList3.do">실바</a></h1>
+			<h1><a href="itemList4.do">포켓몬스터</a></h1>
+			<h1><a href="itemList5.do">진격의거인</a></h1>
+			<h1><a href="itemList6.do">원피스</a></h1>
 			<div class="new_item">
 				<h1>신상품</h1>
 				<div class="item_content">

@@ -28,9 +28,9 @@
 	
 	<insert id="itemsInsert" parameterType="item">
 		insert into
-		items(qty,img, pName, price, category,img_hover, data)
+		items(qty,img, pName, price, category,img_hover, data,register_date)
 		values(
-		#{qty}#{img},#{pName},#{price},#{category},#{img_hover},#{data}
+		#{qty},#{img},#{pName},#{price},#{category},#{img_hover},#{data},#{registerDate}
 		)
 
 	</insert>

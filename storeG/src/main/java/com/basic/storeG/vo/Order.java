@@ -25,7 +25,7 @@ public class Order {
 
     
     public Order(int orderNo, String address, String name, String phoneNumber, int salesPrice, int discountPrice,
-			int totalPrice, String items, Timestamp orderDate, int deliveryStatus, int ordersqty) {
+			int totalPrice, String items, Timestamp orderDate, int deliveryStatus, int ordersqty) {}
 
 	public Order(int orderNo, String address, String name, String phoneNumber, int salesPrice, int discountPrice,
 			int totalPrice, String item, Timestamp orderDate, int deliveryStatus) {
@@ -112,7 +112,7 @@ public class Order {
 	}
 	public void setOrders_qty(int ordersqty) {
 		this.ordersqty = ordersqty;
-
+	}
 
 	public int getCart_no() {
 		return cart_no;

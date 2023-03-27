@@ -6,6 +6,7 @@ import com.basic.storeG.cart.CartController;
 import com.basic.storeG.controller.MainController;
 
 import com.basic.storeG.controller.paymentController;
+
 import com.basic.storeG.item.ItemListController;
 import com.basic.storeG.item.ProductController;
 import com.basic.storeG.item.itemsInsertController;
@@ -37,6 +38,8 @@ public class HandlerMapping {
 		
 		
 		mappings.put("/itemList.do", new ItemListController());
+		
+		
 		mappings.put("/itemsInsertPage.do", new itemsInsertPageController());
 		mappings.put("/itemsInsert.do", new itemsInsertController());
 		mappings.put("/product.do", new ProductController());

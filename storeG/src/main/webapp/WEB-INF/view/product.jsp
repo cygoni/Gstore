@@ -165,9 +165,6 @@
 												</dl>
 												<div class="pdt_btn3">
 													<button class="btn btn-success">찜하기</button>
-
-													<button type="submt" class="btn btn-success">바로구매</button>
-													<button class="btn btn-success">장바구니</button>
 													<button class="btn btn-success"
 														onclick="location.href='payment.do'">바로구매</button>
 													<button class="btn btn-success"
