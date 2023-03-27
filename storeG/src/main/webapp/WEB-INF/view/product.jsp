@@ -125,16 +125,9 @@
 												<dl>
 													<dt>주문수량</dt>
 													<dd>
-														<input type="text" name="pdt_qty" maxlength="4" pattern="[0-9]*"
-															value="1"> <span class="pdt_ko"> 개 </span>
-														<div class="updownbtn">
-															<div class="up">
-																<!-- <button class="btn btn-success"></button> -->
-															</div>
-															<div class="down">
-																<button class="btn btn-success"></button>
-															</div>
-														</div>
+														<input type="number" name="pdt_qty" maxlength="4" pattern="[0-9]*"
+															value="1" min="1"> <span class="pdt_ko"> 개 </span>
+														
 														<script type="text/javascript">
 															const inputElement = document
 																.querySelector('input[name=pdt_qty]'); // input 엘리먼트 선택
