@@ -81,6 +81,14 @@ VALUES
 ('jane456', 'password456', 'Jane Doe', '456 Elm St, Anytown USA', 50, '{"coupon3": {"expiry": "2023-12-31", "discount": 15}}', '["product3"]', '{"product3": {"quantity": 3, "price": 7}}', 2, 500, 'Good product!', '555-555-5678', 'jane.doe@email.com'),
 ('bob789', 'password789', 'Bob Johnson', '789 Oak St, Anytown USA', 200, '{"coupon4": {"expiry": "2023-09-30", "discount": 25}}', '["product4", "product5"]', '{"product4": {"quantity": 1, "price": 15}, "product5": {"quantity": 2, "price": 8}}', 10, 1500, 'Fast shipping!', '555-555-9012', 'bob.johnson@email.com');
 
+INSERT INTO members (id, pw, name, address, mileage, coupons, wishlist, cart, order_history, money, review, phone, email) 
+VALUES 
+('admin', 'admin', '관리자', '서울특별시 강남구', 1000000, '{}', NULL, NULL, NULL, 1000000, NULL, '010-2222-3333', 'admin@example.com'),
+('user1', 'user1', '홍길동', '서울특별시 강남구 역삼동 123-45번지', 1000, '{}', NULL, NULL, NULL, 50000, NULL, '010-1234-5678', 'user1@example.com'),
+('user2', 'user2', '김철수', '경기도 수원시 장안구 정자동 678-90번지', 500, '{}', NULL, NULL, NULL, 20000, NULL, '010-2345-6789', 'user2@example.com'),
+('user3', 'user3', '이영희', '인천광역시 부평구 부평동 345-67번지', 0, '{}', NULL, NULL, NULL, 0, NULL, '010-3456-7890', 'user3@example.com'),
+('user4', 'user4', '박민수', '대전광역시 유성구 신성동 123-45번지', 2000, '{}', NULL, NULL, NULL, 100000, NULL, '010-4567-8901', 'user4@example.com'),
+('user5', 'user5', '최지혜', '부산광역시 해운대구 반송동 678-90번지', 1500, '{}', NULL, NULL, NULL, 70000, NULL, '010-5678-9012', 'user5@example.com');
 
 create table items(
 item_no int auto_increment primary key,

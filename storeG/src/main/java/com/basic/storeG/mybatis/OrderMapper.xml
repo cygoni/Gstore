@@ -46,5 +46,9 @@
 		DELETE FROM orders
 		WHERE order_no = #{order_no}
 	</delete>
+	
+	<select id="getAllOrderList" resultType="Order">
+    SELECT * FROM orders
+  </select>
 
 </mapper>

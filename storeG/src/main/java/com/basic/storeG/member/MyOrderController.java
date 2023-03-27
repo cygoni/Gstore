@@ -36,7 +36,9 @@ public class MyOrderController implements Controller{
 		Member member = mdao.getOneMember(id);
 		if(item_no != 0) odao.makeNewOrder(item_no, member);
 		
-		List<Order> list = odao.getMyOrderList(member.getName());
+		List<Order> list;
+		if(!id.equals("admin")) list = odao.getMyOrderList(member.getName());
+		else list = odao.getAllOrderList();
 		request.setAttribute("list", list);
 		return "view/myOrder";
 	}

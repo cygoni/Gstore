@@ -70,11 +70,14 @@
 			<c:if test="${not empty list}">
 				<c:forEach var="order" items="${list}">
 					<tr>
-						<td>${LocalDate.now()}</td>					
+						 <%
+  java.util.Date date = new java.util.Date();
+  java.text.SimpleDateFormat sdf = new java.text.SimpleDateFormat("yyyy-MM-dd");
+%> 
+						<td><%= sdf.format(date) %></td>
 						<td colspan="4">
 							<p>상품명: ${order.item}</p>
-							<p>주문번호: ${order.orderNo}</p>
-							<%-- <p>수량: ${order.qty}</p> --%>
+							<p>주문번호: ${order.orderNo}</p> <%-- <p>수량: ${order.qty}</p> --%>
 							<p>총 가격: ${order.totalPrice}원 (${order.discountPrice}원 할인)</p>
 						</td>
 						<td><c:choose>
@@ -86,7 +89,7 @@
 						<td><c:choose>
 								<c:when
 									test="${order.deliveryStatus == 1 or order.deliveryStatus == 2}">
-									<a href="deleteOrder.do?order_no=${ order.orderNo }">주문 취소</a>
+									<a href="deleteOrder.do?order_no=${ order.orderNo }&item=${ order.item }">주문 취소</a>
 								</c:when>
 								<c:when test="${order.deliveryStatus == 3}">
 									<a href="#">리뷰 작성</a>

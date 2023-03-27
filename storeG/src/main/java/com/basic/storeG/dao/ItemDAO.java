@@ -6,7 +6,6 @@ import org.apache.ibatis.session.SqlSession;
 
 import com.basic.storeG.util.MybatisConfig;
 import com.basic.storeG.vo.Item;
-import com.basic.storeG.vo.Member;
 
 public class ItemDAO {
 
@@ -35,15 +34,14 @@ public class ItemDAO {
 		return item;
 	}
 
-	public int addItems(Item item) {
+	public void addItems(Item item) {
 		SqlSession session = MybatisConfig.getInstance().openSession(true);
-		int cnt = session.insert("mapper.item.itemsInsert", item);
+		session.insert("mapper.item.itemsInsert", item);
 		session.close();
-		return cnt;
 	}
 
 	public List<Item> getLatestItems() {
-		SqlSession session = MybatisConfig.getInstance().openSession();
+		SqlSession session = MybatisConfig.getInstance().openSession(true);
 		List<Item> items = session.selectList("mapper.item.getLatestItems");
 		session.close();
 
@@ -52,12 +50,18 @@ public class ItemDAO {
 	}
 
 	public List<Item> getRandomItems() {
-		SqlSession session = MybatisConfig.getInstance().openSession();
+		SqlSession session = MybatisConfig.getInstance().openSession(true);
 		List<Item> items = session.selectList("mapper.item.getRandomItems");
 		session.close();
 		
 		return items;
 
+	}
+	
+	public void addQty(String item) {
+		SqlSession session = MybatisConfig.getInstance().openSession(true);
+		session.update("mapper.item.addQty", item);
+		session.close();
 	}
 
 }

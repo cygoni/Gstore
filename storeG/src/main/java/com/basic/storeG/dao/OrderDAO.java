@@ -1,6 +1,10 @@
 package com.basic.storeG.dao;
 
+import java.security.Timestamp;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
+import java.sql.*;
 
 import org.apache.ibatis.session.SqlSession;
 
@@ -33,6 +37,7 @@ public class OrderDAO {
 			order.setSalesPrice(item.getPrice()); // 판매 가격
 			order.setDiscountPrice(0); // 할인 가격
 			order.setTotalPrice(item.getPrice()); // 최종 결제 가격
+			
 			order.setDeliveryStatus(1); // 배송 상태를 '배송 준비 중'으로 설정합니다.
 			order.setCart_no(0); // 장바구니 번호를 0으로 설정합니다.
 			session.insert("mapper.order.insertOrder", order);
@@ -53,6 +58,16 @@ public class OrderDAO {
 		SqlSession session = MybatisConfig.getInstance().openSession(true);
 		session.delete("mapper.order.deleteOrder", order_no);
 		session.close();
+	}
+	
+	public List<Order> getAllOrderList() {
+	    SqlSession session = MybatisConfig.getInstance().openSession(true);
+
+	    List<Order> orderList = session.selectList("mapper.order.getAllOrderList");
+	    
+	    session.close();
+
+	    return orderList;
 	}
 
 }

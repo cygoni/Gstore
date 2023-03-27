@@ -50,7 +50,7 @@
 					<div class="myinfo">
 						<c:if test="${sessionScope.id == 'admin'}">
 							<button class="myinfo_button"
-								onclick="location.href='itemsInsert.do'">
+								onclick="location.href='itemsInsertPage.do'">
 								<i class="fa-solid fa-person"></i>
 							</button>
 						</c:if>

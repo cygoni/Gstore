@@ -45,6 +45,12 @@
 	<select id="getRandomItems" resultType="Item">
 		SELECT * FROM items ORDER BY RAND() LIMIT 4
 	</select>
+	
+	<update id="addQty" parameterType="String">
+    UPDATE items
+    SET qty = qty + 1
+    WHERE pName = #{item}
+  </update>
 
 </mapper>
 

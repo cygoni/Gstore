@@ -24,8 +24,8 @@
 					<div class="phone">${vo.phone}</div>
 					
 					<div class="address">${vo.address}<button class="address_button" id="member_post" readonly onclick="findAddr()">주소 찾기</button></div>
-				  <input id="member_addr" type="text" placeholder="Address" readonly> 
-  				  <input type="text" placeholder="Detailed Address">
+				  <input id="member_addr" type="text" value="${vo.address}" readonly> 
+  				  <input type="text" placeholder="상세주소">
 				</div>
 				</div>
 			</div>
@@ -74,7 +74,7 @@
 					  </div>
 					  <div class="discount_price">
 					    <div class="product-label">할인금액</div>
-					    <div class="product-value">2,000원</div>
+					    <div class="product-value">0원</div>
 					  </div>
 					  <div class="total_price">
 					    <div class="product-label">총 결제 금액</div>
