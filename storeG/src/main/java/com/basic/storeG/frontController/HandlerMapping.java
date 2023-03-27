@@ -39,13 +39,12 @@ public class HandlerMapping {
 		
 		mappings.put("/itemList.do", new ItemListController());
 		
-		
 		mappings.put("/itemsInsertPage.do", new itemsInsertPageController());
 		mappings.put("/itemsInsert.do", new itemsInsertController());
 		mappings.put("/product.do", new ProductController());
 		
 		mappings.put("/payment.do", new paymentController());
-		
+		 
 		mappings.put("/myinfo.do", new myinfoController());
 		mappings.put("/myinfomodify.do", new myinfomodifyController());
 		mappings.put("/modify.do", new modifyController());
