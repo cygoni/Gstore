@@ -20,11 +20,18 @@ public class ProductController implements Controller {
 		response.setContentType("text/html; charset=UTF-8");
 		
 		int itemNo = Integer.parseInt(request.getParameter("itemNo"));
+		System.out.println("pdt itemno=" + itemNo);
 		
 		ItemDAO dao = ItemDAO.getInstance();
 		Item item = dao.getOneItem(itemNo);
-		String cateF = "LostArk";
-		//if(item.getCategory()==1) cateF="LostArk";
+		
+		String cateF ="";
+		if(item.getCategory()==1) cateF="LostArk";
+		else if(item.getCategory()==2) cateF="OverWatch";
+		else if(item.getCategory()==3) cateF="SylvanianFamilies";
+		else if(item.getCategory()==4) cateF="poketmon";
+		else if(item.getCategory()==5) cateF="titan";
+		else cateF="onepiece";
 		
 		request.setAttribute("item", item);
 		request.setAttribute("cateF", cateF);

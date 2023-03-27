@@ -13,9 +13,6 @@ public class Order {
     private int totalPrice;
     private Timestamp orderDate;
     private int deliveryStatus;
-
-    private int ordersqty;
-
     private int cart_no;
     
 
@@ -25,7 +22,7 @@ public class Order {
 
     
     public Order(int orderNo, String address, String name, String phoneNumber, int salesPrice, int discountPrice,
-			int totalPrice, String items, Timestamp orderDate, int deliveryStatus, int ordersqty) {
+			int totalPrice, String items, Timestamp orderDate, int deliveryStatus, int ordersqty) {}
 
 	public Order(int orderNo, String address, String name, String phoneNumber, int salesPrice, int discountPrice,
 			int totalPrice, String item, Timestamp orderDate, int deliveryStatus) {
@@ -41,7 +38,6 @@ public class Order {
 		this.totalPrice = totalPrice;
 		this.orderDate = orderDate;
 		this.deliveryStatus = deliveryStatus;
-		this.ordersqty = ordersqty;
 	}
 
 
@@ -106,13 +102,6 @@ public class Order {
 	public void setDeliveryStatus(int deliveryStatus) {
 		this.deliveryStatus = deliveryStatus;
 	}
-
-	public int getOrders_qty() {
-		return ordersqty;
-	}
-	public void setOrders_qty(int ordersqty) {
-		this.ordersqty = ordersqty;
-
 
 	public int getCart_no() {
 		return cart_no;

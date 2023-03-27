@@ -12,11 +12,39 @@
 		<result column="sales_price" property="salesPrice" />
 		<result column="discount_price" property="discountPrice" />
 		<result column="total_price" property="totalPrice" />
-		<result column="order_date" property="orderDate" />
+		<!-- <result column="order_date" property="orderDate" /> -->
 		<result column="delivery_status" property="deliveryStatus" />
 		<result column="cart_no" property="cart_no" />
 	</resultMap>
-	
-	
-	
+
+	<insert id="insertOrder" parameterType="Order">
+		INSERT INTO orders (
+		item, address, name, phone_number, sales_price, discount_price,
+		total_price, delivery_status, cart_no
+		) VALUES (
+		#{item}, #{address},
+		#{name}, #{phoneNumber}, #{salesPrice}, #{discountPrice},
+		#{totalPrice}, #{deliveryStatus}, #{cart_no}
+		)
+	</insert>
+
+	<select id="getMyOrderList" parameterType="string"
+		resultMap="order">
+		SELECT *
+		FROM orders
+		WHERE name = #{id}
+	</select>
+
+	<update id="updateItemQty" parameterType="int">
+		UPDATE items
+		SET qty =
+		qty - 1
+		WHERE item_no = #{item_no}
+	</update>
+
+	<delete id="deleteOrder" parameterType="int">
+		DELETE FROM orders
+		WHERE order_no = #{order_no}
+	</delete>
+
 </mapper>

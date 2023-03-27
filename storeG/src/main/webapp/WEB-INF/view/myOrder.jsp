@@ -1,12 +1,21 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ include file="../parts/header.jsp"%>
 
 <div class="myOrder_container" style="border: 1px solid black">
 	<div class="myOrder_header">
 		<h2>주문내역</h2>
 	</div>
+
+	<%-- <c:if test="${not empty param.item_no}">
+		<script>
+    // 현재 URL에서 파라미터 제거
+    var newUrl = window.location.pathname + window.location.search.replace(/[\?&]item_no=[^&]+/gi,'');
+    // 새로운 URL로 페이지 이동
+    window.location.replace(newUrl);
+</script>
+	</c:if> --%>
 
 	<div class="myOrder_search" style="border: 1px solid black">
 		<span>기간별조회</span>
@@ -21,7 +30,7 @@
 	</div>
 
 	<div class="myOrder_content">
-		<table>
+		<%-- <table>
 
 			<tr>
 				<th colspan="1">날짜</th>
@@ -38,15 +47,67 @@
 
 			</tr>
 			
+			<c:if test="${not empty list}">
+				<c:forEach var="list" items="${list}">
+					<td></td>
+					<td colspan="4">
+						<p>상품명 :${list.item}</p>
+						<p>주문번호 : ${list.orderNo}</p>
+					</td>
+					<td></td>
+					<td></td>
+				</c:forEach>
+			</c:if>
+			
+		</table> --%>
+		<table>
+			<tr>
+				<th colspan="1">날짜</th>
+				<th colspan="4">상품정보</th>
+				<th colspan="1">배송상태</th>
+				<th colspan="1">비고</th>
+			</tr>
+			<c:if test="${not empty list}">
+				<c:forEach var="order" items="${list}">
+					<tr>
+						<td>${LocalDate.now()}</td>					
+						<td colspan="4">
+							<p>상품명: ${order.item}</p>
+							<p>주문번호: ${order.orderNo}</p>
+							<%-- <p>수량: ${order.qty}</p> --%>
+							<p>총 가격: ${order.totalPrice}원 (${order.discountPrice}원 할인)</p>
+						</td>
+						<td><c:choose>
+								<c:when test="${order.deliveryStatus == 1}">배송 준비 중</c:when>
+								<c:when test="${order.deliveryStatus == 2}">배송 중</c:when>
+								<c:when test="${order.deliveryStatus == 3}">배송 완료</c:when>
+								<c:otherwise>알 수 없음</c:otherwise>
+							</c:choose></td>
+						<td><c:choose>
+								<c:when
+									test="${order.deliveryStatus == 1 or order.deliveryStatus == 2}">
+									<a href="deleteOrder.do?order_no=${ order.orderNo }">주문 취소</a>
+								</c:when>
+								<c:when test="${order.deliveryStatus == 3}">
+									<a href="#">리뷰 작성</a>
+								</c:when>
+								<c:otherwise>알 수 없음</c:otherwise>
+							</c:choose></td>
+					</tr>
+				</c:forEach>
+			</c:if>
 		</table>
+
 	</div>
 
 	<div class="myOrder_footer">
-	
-		<c:out value="${cart.items}"/><br>
+
+		<c:out value="${cart.items}" />
+		<br>
 		<c:forEach var="item" items="${cart.items}">
-    <c:out value="${item[qty]}.val()"/><br>
-</c:forEach>
+			<c:out value="${item[qty]}.val()" />
+			<br>
+		</c:forEach>
 	</div>
 
 </div>

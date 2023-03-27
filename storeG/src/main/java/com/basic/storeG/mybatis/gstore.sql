@@ -141,6 +141,7 @@ INSERT INTO items (qty, img, pName, price, category, rating, img_hover, data, re
 (10,'one09.jpg','원피스 쵸파 피규어',20000,6,0,'["one09_01.jpg","one09_02.jpg","one09_03.jpg"]','["one09_01.jpg","one09_02.jpg","one09_03.jpg"]',now()),
 (10,'one10.jpg','원피스 에이스 피규어',50000,6,0,'["one10_01.jpg","one10_02.jpg","one10_03.jpg","one10_04.jpg"]','["one10_01.jpg","one10_02.jpg","one10_03.jpg","one10_04.jpg","one10_05.jpg","one10_06.jpg","one10_07.jpg"]',now());
 
+INSERT INTO items (qty, img, pName, price, category, rating, img_hover, data, register_date) VALUES 
 (10, 'ow01.jpg', '넨도로이드 847 "오버워치" D.Va(디바) 클래식스킨 에디션', 52000, 2, 0, '["ow01_01.jpg", "ow01_02.jpg", "ow01_03.jpg", "ow01_04.jpg", "ow01_05.jpg", "ow01_06.jpg", "ow01_07.jpg"]', '["ow01_01.jpg", "ow01_02.jpg", "ow01_03.jpg", "ow01_04.jpg", "ow01_05.jpg", "ow01_06.jpg", "ow01_07.jpg"]', NOW()),
 (10, 'ow02.jpg', 'figma 피그마 오버워치 위도우 메이커', 93000, 2, 0, '["ow02_01.jpg", "ow02_02.jpg", "ow02_03.jpg", "ow02_04.jpg", "ow02_05.jpg", "ow02_06.jpg"]', '["ow00.jpg", "ow02_01.jpg", "ow02_02.jpg", "ow02_03.jpg", "ow02_04.jpg", "ow02_05.jpg", "ow02_06.jpg"]', NOW()),
 (10, 'ow03.jpg', '오버워치 한조 스테츄', 299000, 2, 0, '["ow03_01.jpg", "ow03_02.jpg", "ow03_03.jpg", "ow03_04.jpg", "ow03_05.jpg", "ow03_06.jpg"]', '["ow00.jpg", "ow03_01.jpg", "ow03_02.jpg", "ow03_03.jpg", "ow03_04.jpg", "ow03_05.jpg", "ow03_06.jpg"]', NOW()),
@@ -149,7 +150,6 @@ INSERT INTO items (qty, img, pName, price, category, rating, img_hover, data, re
 (10, 'ow06.jpg', 'figma (피그마) 오버워치 트레이서', 72000, 2, 0, '["ow06_01.jpg", "ow06_02.jpg", "ow06_03.jpg", "ow06_04.jpg", "ow06_05.jpg"]', '["ow00.jpg", "ow06_01.jpg", "ow06_02.jpg", "ow06_03.jpg", "ow06_04.jpg", "ow06_05.jpg"]', NOW()),
 (10, 'ow07.jpg', 'figma (피그마) 오버워치 겐지 (OVERWATCH)', 92000, 2, 0, '["ow07_01.jpg", "ow07_02.jpg", "ow07_03.jpg", "ow07_04.jpg", "ow07_05.jpg", "ow07_06.jpg", "ow07_07.jpg"]', '["ow00.jpg", "ow07_01.jpg", "ow07_02.jpg", "ow07_03.jpg", "ow07_04.jpg", "ow07_05.jpg", "ow07_06.jpg", "ow07_07.jpg"]', NOW()),
 (10, 'ow08.jpg', ' figma (피그마) 오버워치 맥크리', 91000, 2, 0, '["ow08_01.jpg", "ow08_02.jpg", "ow08_03.jpg", "ow08_04.jpg", "ow08_05.jpg"]', '["ow00.jpg", "ow08_01.jpg", "ow08_02.jpg", "ow08_03.jpg", "ow08_04.jpg", "ow08_05.jpg"]', NOW());
-
 
 INSERT INTO items (qty, img, pName, price, category, rating, img_hover, data, register_date) VALUES 
 (10, 'sf01.jpg', '초콜릿 토끼- 아기 & 침대', 13000, 3, 0, '["sf01_01.jpg"]', '["sf00.jpg", "sf01_01.jpg"]', NOW()),

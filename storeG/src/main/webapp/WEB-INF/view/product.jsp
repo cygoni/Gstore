@@ -1,21 +1,24 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-	<%@ include file="../parts/header.jsp" %>
-		<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ include file="../parts/header.jsp"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
 
-			<div class="product_container">
-				<hr style="border: 3px solid black;">
-				<div class="product_top">
-					<div class="product_top_left">
-						<img class="product_main" alt="" src="${ctx}/img/${cateF}/${item.img}">
-						<ul class="product_ul">
-							<li><img alt=" " src="${ctx}/img/${cateF}/${item.img}"></li>
-							<c:if test="${not empty item.img_hover}">
-								<c:set var="ah"
-									value="${fn:substring(item.img_hover, 1, fn:length(item.img_hover)-2)}" />
-								<c:set var="imgArr" value="${fn:split(ah, ',')}" />
+<div class="product_container">
+	<hr style="border: 3px solid black;">
+	<div class="product_top">
+		<div class="product_top_left">
+			<img class="product_main" alt=""
+				src="${ctx}/img/${cateF}/${item.img}">
+			<ul class="product_ul">
+				<li><img alt=" " src="${ctx}/img/${cateF}/${item.img}"></li>
+				<c:if test="${not empty item.img_hover}">
+					<c:set var="ah"
+						value="${fn:substring(item.img_hover, 1, fn:length(item.img_hover)-2)}" />
+					<c:set var="imgArr" value="${fn:split(ah, ',')}" />
 
-								<c:forEach var="img" items="${imgArr}">
-									<c:set var="imgWithoutQuotes" value="${fn:replace(img, '\\\"', '')}" />
+					<c:forEach var="img" items="${imgArr}">
+						<c:set var="imgWithoutQuotes"
+							value="${fn:replace(img, '\\\"', '')}" />
 						<%-- <c:out value="${ fn:trim(imgWithoutQuotes) }"></c:out> --%>
 						<li><img alt=""
 							src="${ctx}/img/${cateF}/${fn:trim(imgWithoutQuotes)}"></li>
@@ -34,7 +37,6 @@
 				});
 			} </script>
 
-										<form action="payment.do?itemNo=${item.itemNo}" method="post">
 											<div class="product_top_right">
 												<img alt="" src="${ctx}/img/productEvent.jpg">
 												<div class="product_cate">
@@ -165,20 +167,15 @@
 												</dl>
 												<div class="pdt_btn3">
 													<button class="btn btn-success">찜하기</button>
-
-													<button type="submt" class="btn btn-success">바로구매</button>
-													<button class="btn btn-success">장바구니</button>
 													<button class="btn btn-success"
-														onclick="location.href='payment.do'">바로구매</button>
+														onclick="location.href='payment.do?itemNo=${item.itemNo}'">바로구매</button>
 													<button class="btn btn-success"
-														onclick="location.href=`cart.do?item_no=${item.itemNo}`">장바구니</button>
+														onclick="location.href=`cart.do?itemNo=${item.itemNo}`">장바구니</button>
 
 												</div>
-										</form>
+										<%-- </form> --%>
 					</div>
 				</div>
-
-				<%-- onclick="location.href='payment.do'" onclick="location.href='cart.do?item_no=${item.item_no}'" --%>
 
 					<hr style="border: 2px solid black;">
 
@@ -193,7 +190,7 @@
 
 							<c:forEach var="img2" items="${dataArr}">
 								<c:set var="imgWithoutQuotes2" value="${fn:replace(img2, '\\\"', '')}" />
-						<c:out value="${ fn:trim(imgWithoutQuotes2) }"></c:out>
+						<%-- <c:out value="${ fn:trim(imgWithoutQuotes2) }"></c:out> --%>
 						<img alt=""
 							src="${ctx}/img/${cateF}/${fn:trim(imgWithoutQuotes2)}">
 					</c:forEach>

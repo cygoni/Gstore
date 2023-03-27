@@ -3,9 +3,11 @@ package com.basic.storeG.frontController;
 import java.util.HashMap;
 
 import com.basic.storeG.cart.CartController;
+import com.basic.storeG.cart.CartListController;
 import com.basic.storeG.controller.MainController;
 
 import com.basic.storeG.controller.paymentController;
+import com.basic.storeG.item.DeleteOrderController;
 import com.basic.storeG.item.ItemListController;
 import com.basic.storeG.item.ProductController;
 import com.basic.storeG.item.itemsInsertController;
@@ -47,9 +49,11 @@ public class HandlerMapping {
 		mappings.put("/myinfomodify.do", new myinfomodifyController());
 		mappings.put("/modify.do", new modifyController());
 		mappings.put("/myOrder.do", new MyOrderController());
+		mappings.put("/deleteOrder.do", new DeleteOrderController());
 		mappings.put("/deleteMember.do",new deleteMemberController());
 		
 		mappings.put("/cart.do", new CartController());
+		mappings.put("/cartList.do", new CartListController());
 	}
 
 	public Controller getController(String key) {

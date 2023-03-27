@@ -58,7 +58,6 @@ public class CartController implements Controller {
 //					//아이템이 없으니깐 배열에 추가
 //					cdao.addItem(c.getCart_no(), item_no);
 //				}
-//				
 //			}
 //		}
 		

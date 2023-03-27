@@ -10,33 +10,54 @@ import com.basic.storeG.vo.Member;
 
 public class ItemDAO {
 
-	private ItemDAO() {}
-	
-	private static ItemDAO dao = new ItemDAO();
-	public static ItemDAO getInstance() {
-		return  dao;
+	private ItemDAO() {
 	}
-	
+
+	private static ItemDAO dao = new ItemDAO();
+
+	public static ItemDAO getInstance() {
+		return dao;
+	}
+
 	public List<Item> getItemList(int cate) {
 		SqlSession session = MybatisConfig.getInstance().openSession(true);
 		List<Item> itemList = session.selectList("mapper.item.getItemList", cate);
 		session.close();
-		
+
 		return itemList;
 	}
-	
+
 	public Item getOneItem(int itemNo) {
 		SqlSession session = MybatisConfig.getInstance().openSession(true);
 		Item item = session.selectOne("mapper.item.getOneItem", itemNo);
 		session.close();
-		
+
 		return item;
 	}
-	
-	 public int addItems(Item item) {
-			SqlSession session= MybatisConfig.getInstance().openSession(true);
-			int cnt = session.insert("mapper.item.itemsInsert",item);
-			session.close();
-			return cnt;
-		}
+
+	public int addItems(Item item) {
+		SqlSession session = MybatisConfig.getInstance().openSession(true);
+		int cnt = session.insert("mapper.item.itemsInsert", item);
+		session.close();
+		return cnt;
+	}
+
+	public List<Item> getLatestItems() {
+		SqlSession session = MybatisConfig.getInstance().openSession();
+		List<Item> items = session.selectList("mapper.item.getLatestItems");
+		session.close();
+
+		return items;
+
+	}
+
+	public List<Item> getRandomItems() {
+		SqlSession session = MybatisConfig.getInstance().openSession();
+		List<Item> items = session.selectList("mapper.item.getRandomItems");
+		session.close();
+		
+		return items;
+
+	}
+
 }

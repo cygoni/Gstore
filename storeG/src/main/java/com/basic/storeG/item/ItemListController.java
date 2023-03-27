@@ -22,13 +22,13 @@ public class ItemListController implements Controller {
 		
 		response.setContentType("text/html; charset=UTF-8");
 		
-//		String cate = request.getParameter("cate");
-		String cate = "1";
+		String cate = request.getParameter("cate");
+		System.out.println("cate=" +cate);
 		
 		ItemDAO dao = ItemDAO.getInstance();
 		List<Item> list = dao.getItemList(Integer.parseInt(cate));
 		request.setAttribute("list", list);
-		
+		request.setAttribute("cate", cate);
 		
 		return "view/itemList";
 	}

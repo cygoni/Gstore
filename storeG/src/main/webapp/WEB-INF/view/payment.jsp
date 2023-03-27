@@ -81,7 +81,7 @@
 					    <div class="product-value">${item.price}원</div>
 					  </div>
 					</div>		
-					<div class="payment-button">결제하기</div>
+					<div class="payment-button" onclick="location.href='myOrder.do?item_no=${item.itemNo}'">결제하기</div>
 				</div>
 
 			</div>

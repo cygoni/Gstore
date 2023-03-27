@@ -18,7 +18,14 @@
 		<p class="text-center text-muted">© 2023 Company, Inc</p>
 	</footer>
 	</div>
-
+<div class="button-container">
+        <button class="btn btn-success" onclick="location.href='itemList.do?cate=1'">LostArk</button>
+        <button class="btn btn-success" onclick="location.href='itemList.do?cate=2'">OverWatch</button>
+        <button class="btn btn-success" onclick="location.href='itemList.do?cate=3'">SylvanianFamilies</button>
+        <button class="btn btn-success" onclick="location.href='itemList.do?cate=4'">Poketmon</button>
+        <button class="btn btn-success" onclick="location.href='itemList.do?cate=5'">Titan</button>
+        <button class="btn btn-success" onclick="location.href='itemList.do?cate=6'">Onepiece</button>
+</div>
 
 </body>
 </html>

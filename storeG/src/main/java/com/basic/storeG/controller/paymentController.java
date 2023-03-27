@@ -19,9 +19,10 @@ public class paymentController implements Controller{
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		response.setContentType("text/html; charset=UTF-8");
-		HttpSession session = request.getSession();
 		
+		HttpSession session = request.getSession();
 		String id = (String)session.getAttribute("id");
+		System.out.println("pay itemno= " + request.getParameter("itemNo"));
 		int itemNo = Integer.parseInt(request.getParameter("itemNo"));
 		
 		ItemDAO dao = ItemDAO.getInstance();
