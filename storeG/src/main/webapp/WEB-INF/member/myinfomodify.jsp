@@ -2,7 +2,10 @@
     pageEncoding="UTF-8"%>
     <title>내정보 수정 페이지</title>
 <%@ include file="../parts/header.jsp"%>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script type="text/javascript" src="script/myinfomodify.js" defer></script>
 <script type="text/javascript" src="script/modify.js" defer></script>
+
 <form action="modify.do" method="post">
 <div class="myinfo_container">
 	<div class="session">
@@ -18,8 +21,11 @@
 				</div>
 				<div class="mid_address">
 					<div class="info_address">주소</div>
-					<div class="user_address"><input type="text" id="address" name="address" value="${vo.address}"></div>
-					<div class="content_mid_end"></div>
+					<div class="user_address"><input type="text" id="address" name="address" value="${vo.address}" readonly >
+				    
+					</div>
+  				  
+					<div class="content_mid_end"><button type="button" class="modify_address_button" id="member_post" readonly onclick="findAddr()">주소 찾기</button></div>
 
 				</div>
 				<div class="mid_phone_no">
